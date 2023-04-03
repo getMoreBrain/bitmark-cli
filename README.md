@@ -14,7 +14,7 @@ $ npm install -g bitmark-cli
 $ bitmark COMMAND
 running command...
 $ bitmark (--version)
-bitmark-cli/0.0.1 darwin-x64 node-v16.19.1
+bitmark-cli/0.0.2 darwin-x64 node-v16.19.1
 $ bitmark --help [COMMAND]
 USAGE
   $ bitmark COMMAND
@@ -23,11 +23,8 @@ USAGE
 <!-- usagestop -->
 # Commands
 <!-- commands -->
-- [@bitmark-standard/bitmark-cli](#bitmark-standardbitmark-cli)
-- [Usage](#usage)
-- [Commands](#commands)
-  - [`bitmark convert [INPUT]`](#bitmark-convert-input)
-  - [`bitmark help [COMMANDS]`](#bitmark-help-commands)
+* [`bitmark convert [INPUT]`](#bitmark-convert-input)
+* [`bitmark help [COMMANDS]`](#bitmark-help-commands)
 
 ## `bitmark convert [INPUT]`
 
@@ -64,7 +61,7 @@ EXAMPLES
   $ bitmark convert '[{"bitmark": "[.article] Hello World","bit": { "type": "article", "format": "bitmark--", "body": "Hello World" }}]'
 ```
 
-_See code: [dist/commands/convert.ts](https://github.com/bitmark-standard/bitmark-cli/blob/v0.0.1/dist/commands/convert.ts)_
+_See code: [dist/commands/convert.ts](https://github.com/bitmark-standard/bitmark-cli/blob/v0.0.2/dist/commands/convert.ts)_
 
 ## `bitmark help [COMMANDS]`
 
