@@ -1,6 +1,8 @@
 @bitmark-standard/bitmark-cli
 =================
 
+![Build & Test](https://github.com/getMoreBrain/bitmark-cli/actions/workflows/build-test.yml/badge.svg?branch=main)
+
 Bitmark command line tool.
 
 <!-- toc -->

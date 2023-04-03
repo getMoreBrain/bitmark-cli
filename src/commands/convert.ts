@@ -1,5 +1,5 @@
 import { Args, Command, Flags } from '@oclif/core';
-import { BitmarkTool, Output } from 'bitmark-generator';
+import { BitmarkTool, Output } from '@getmorebrain/bitmark-generator';
 import { StringUtils } from '../utils/StringUtils';
 
 const bitmarkTool = new BitmarkTool();
@@ -13,6 +13,9 @@ export default class Convert extends Command {
   static examples = [
     "<%= config.bin %> <%= command.id %> '[.article] Hello World'",
     '<%= config.bin %> <%= command.id %> \'[{"bitmark": "[.article] Hello World","bit": { "type": "article", "format": "bitmark--", "body": "Hello World" }}]\'',
+    '<%= config.bin %> <%= command.id %> input.json -o output.bit',
+    '<%= config.bin %> <%= command.id %> input.bit -o output.json',
+    '<%= config.bin %> <%= command.id %> -f ast input.json -o output.ast.json',
   ];
 
   static flags = {

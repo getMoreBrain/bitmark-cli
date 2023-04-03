@@ -1,5 +1,5 @@
 {
-  "name": "bitmark-cli",
+  "name": "@getmorebrain/bitmark-cli",
   "version": "0.0.2",
   "description": "Bitmark comand line interface",
   "author": "Richard Sewell",
@@ -34,10 +34,10 @@
     "antlr4ts": "0.5.0-alpha.4"
   },
   "dependencies": {
+    "@getmorebrain/bitmark-generator": "^0.0.1",
     "@oclif/core": "^2",
     "@oclif/plugin-help": "^5",
-    "@oclif/plugin-plugins": "^2.4.3",
-    "bitmark-generator": "getMoreBrain/bitmark-generator.git#commit=de39d9c95cebf90a7ee7ca80454175fc59d6f008"
+    "@oclif/plugin-plugins": "^2.4.3"
   },
   "devDependencies": {
     "@oclif/test": "^2.3.14",
