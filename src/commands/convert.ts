@@ -4,6 +4,9 @@ import { StringUtils } from '../utils/StringUtils';
 
 const bitmarkTool = new BitmarkTool();
 
+/**
+ * Convert command
+ */
 export default class Convert extends Command {
   static description = 'Convert between bitmark formats';
 
