@@ -1,0 +1,88 @@
+{
+  "name": "bitmark-cli",
+  "version": "0.0.1",
+  "description": "Bitmark comand line interface",
+  "author": "Richard Sewell",
+  "license": "ISC",
+  "homepage": "https://github.com/bitmark-standard/bitmark-cli#readme",
+  "repository": "bitmark-standard/bitmark-cli",
+  "bin": {
+    "bitmark": "./bin/run"
+  },
+  "main": "dist/index.js",
+  "files": [
+    "/bin",
+    "/dist",
+    "/npm-shrinkwrap.json",
+    "/oclif.manifest.json"
+  ],
+  "scripts": {
+    "start": "node ./bin/dev",
+    "build": "run clean && tsc -b",
+    "clean": "shx rm -rf ./dist",
+    "lint": "eslint --max-warnings 0 -- './**/*.@(tsx|ts|jsx|js|mjs|cjs)'",
+    "postpack": "shx rm -f oclif.manifest.json",
+    "posttest": "yarn lint",
+    "prepack": "yarn build && oclif manifest && oclif readme",
+    "test": "mocha --forbid-only \"test/**/*.test.ts\"",
+    "version": "oclif readme && git add README.md",
+    "ncu": "yarn dlx npm-check-updates -i",
+    "oclif": "yarn dlx oclif"
+  },
+  "resolutions": {
+    "antlr4ts": "0.5.0-alpha.4"
+  },
+  "dependencies": {
+    "@oclif/core": "^2",
+    "@oclif/plugin-help": "^5",
+    "@oclif/plugin-plugins": "^2.4.3",
+    "bitmark-generator": "getMoreBrain/bitmark-generator.git#commit=de39d9c95cebf90a7ee7ca80454175fc59d6f008"
+  },
+  "devDependencies": {
+    "@oclif/test": "^2.3.14",
+    "@types/chai": "^4",
+    "@types/eslint-plugin-prettier": "^3.1.0",
+    "@types/mocha": "^9.0.0",
+    "@types/node": "^16.18.23",
+    "chai": "^4",
+    "eslint": "^8.37.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-arca": "^0.16.0",
+    "eslint-plugin-json": "^3.1.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "mocha": "^9",
+    "oclif": "^3",
+    "prettier": "^2.8.7",
+    "shx": "^0.3.4",
+    "ts-node": "^10.9.1",
+    "tslib": "^2.5.0",
+    "typescript": "^5.0.3"
+  },
+  "oclif": {
+    "bin": "bitmark",
+    "dirname": "bitmark",
+    "commands": "./dist/commands",
+    "plugins": [
+      "@oclif/plugin-help",
+      "@oclif/plugin-plugins"
+    ],
+    "topicSeparator": " ",
+    "topics": {
+      "hello": {
+        "description": "Say hello to the world and others"
+      }
+    }
+  },
+  "packageManager": "yarn@3.5.0",
+  "engines": {
+    "node": ">=12.0.0",
+    "npm": ">=6.8.0",
+    "git": ">=2.11.0",
+    "yarn": ">=3.5.0"
+  },
+  "bugs": "https://github.com/bitmark-standard/bitmark-cli/issues",
+  "keywords": [
+    "bitmark"
+  ],
+  "types": "dist/index.d.ts"
+}

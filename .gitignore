@@ -1,0 +1,31 @@
+# BUILD
+*-debug.log
+*-error.log
+/.nyc_output
+/dist
+/lib
+/package-lock.json
+/tmp
+node_modules
+oclif.manifest.json
+.history
+/coverage
+tsconfig.tsbuildinfo
+
+# TEST
+/test/results
+
+# YARN
+**/.yarn/*
+!**/.yarn/releases
+!**/.yarn/plugins
+!**/.yarn/sdks
+**/yarn-error.log
+node_modules
+
+# Swap the comments on the following lines if you don't wish to use zero-installs
+# Documentation here: https://yarnpkg.com/features/zero-installs
+# !/.yarn/cache
+**/.pnp.*
+
+# PACKAGE SPECIFIC
