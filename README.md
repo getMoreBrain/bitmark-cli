@@ -1,8 +1,6 @@
 @bitmark-standard/bitmark-cli
 =================
 
-[![License](https://img.shields.io/npm/l/oclif-hello-world.svg)](https://github.com/getMoreBrain/bitmark-cli/blob/main/package.json)
-
 Bitmark command line tool.
 
 <!-- toc -->
@@ -12,11 +10,11 @@ Bitmark command line tool.
 # Usage
 <!-- usage -->
 ```sh-session
-$ npm install -g @bitmark-standard/bitmark-cli
+$ npm install -g bitmark-cli
 $ bitmark COMMAND
 running command...
 $ bitmark (--version)
-@bitmark-standard/bitmark-cli/0.0.2 darwin-x64 node-v16.19.1
+bitmark-cli/0.0.1 darwin-x64 node-v16.19.1
 $ bitmark --help [COMMAND]
 USAGE
   $ bitmark COMMAND
@@ -25,16 +23,48 @@ USAGE
 <!-- usagestop -->
 # Commands
 <!-- commands -->
-* [`bitmark help [COMMANDS]`](#bitmark-help-commands)
-* [`bitmark plugins`](#bitmark-plugins)
-* [`bitmark plugins:install PLUGIN...`](#bitmark-pluginsinstall-plugin)
-* [`bitmark plugins:inspect PLUGIN...`](#bitmark-pluginsinspect-plugin)
-* [`bitmark plugins:install PLUGIN...`](#bitmark-pluginsinstall-plugin-1)
-* [`bitmark plugins:link PLUGIN`](#bitmark-pluginslink-plugin)
-* [`bitmark plugins:uninstall PLUGIN...`](#bitmark-pluginsuninstall-plugin)
-* [`bitmark plugins:uninstall PLUGIN...`](#bitmark-pluginsuninstall-plugin-1)
-* [`bitmark plugins:uninstall PLUGIN...`](#bitmark-pluginsuninstall-plugin-2)
-* [`bitmark plugins update`](#bitmark-plugins-update)
+- [@bitmark-standard/bitmark-cli](#bitmark-standardbitmark-cli)
+- [Usage](#usage)
+- [Commands](#commands)
+  - [`bitmark convert [INPUT]`](#bitmark-convert-input)
+  - [`bitmark help [COMMANDS]`](#bitmark-help-commands)
+
+## `bitmark convert [INPUT]`
+
+Convert between bitmark formats
+
+```
+USAGE
+  $ bitmark convert [INPUT] [-f bitmark|json|ast] [-a -o <value>] [-p] [--indent <value>]
+    [--explicitTextFormat]
+
+ARGUMENTS
+  INPUT  file to read, or bitmark or json string. If not specified, input will be from <stdin>
+
+FLAGS
+  -a, --append           append to the output file (default is to overwrite)
+  -f, --format=<option>  output format. If not specified, bitmark is converted to JSON, and JSON / AST is converted to
+                         bitmark
+                         <options: bitmark|json|ast>
+  -o, --output=FILE      output file. If not specified, output will be to <stdout>
+
+JSON FORMATTING FLAGS
+  -p, --pretty     prettify the JSON output with indent
+  --indent=INDENT  [default: 2] prettify indent
+
+BITMARK FORMATTING FLAGS
+  --explicitTextFormat  Include bitmark text format in bitmark even if it is the default value
+
+DESCRIPTION
+  Convert between bitmark formats
+
+EXAMPLES
+  $ bitmark convert '[.article] Hello World'
+
+  $ bitmark convert '[{"bitmark": "[.article] Hello World","bit": { "type": "article", "format": "bitmark--", "body": "Hello World" }}]'
+```
+
+_See code: [dist/commands/convert.ts](https://github.com/bitmark-standard/bitmark-cli/blob/v0.0.1/dist/commands/convert.ts)_
 
 ## `bitmark help [COMMANDS]`
 
@@ -55,237 +85,4 @@ DESCRIPTION
 ```
 
 _See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v5.2.8/src/commands/help.ts)_
-
-## `bitmark plugins`
-
-List installed plugins.
-
-```
-USAGE
-  $ bitmark plugins [--core]
-
-FLAGS
-  --core  Show core plugins.
-
-DESCRIPTION
-  List installed plugins.
-
-EXAMPLES
-  $ bitmark plugins
-```
-
-_See code: [@oclif/plugin-plugins](https://github.com/oclif/plugin-plugins/blob/v2.4.3/src/commands/plugins/index.ts)_
-
-## `bitmark plugins:install PLUGIN...`
-
-Installs a plugin into the CLI.
-
-```
-USAGE
-  $ bitmark plugins:install PLUGIN...
-
-ARGUMENTS
-  PLUGIN  Plugin to install.
-
-FLAGS
-  -f, --force    Run yarn install with force flag.
-  -h, --help     Show CLI help.
-  -v, --verbose
-
-DESCRIPTION
-  Installs a plugin into the CLI.
-  Can be installed from npm or a git url.
-
-  Installation of a user-installed plugin will override a core plugin.
-
-  e.g. If you have a core plugin that has a 'hello' command, installing a user-installed plugin with a 'hello' command
-  will override the core plugin implementation. This is useful if a user needs to update core plugin functionality in
-  the CLI without the need to patch and update the whole CLI.
-
-
-ALIASES
-  $ bitmark plugins add
-
-EXAMPLES
-  $ bitmark plugins:install myplugin 
-
-  $ bitmark plugins:install https://github.com/someuser/someplugin
-
-  $ bitmark plugins:install someuser/someplugin
-```
-
-## `bitmark plugins:inspect PLUGIN...`
-
-Displays installation properties of a plugin.
-
-```
-USAGE
-  $ bitmark plugins:inspect PLUGIN...
-
-ARGUMENTS
-  PLUGIN  [default: .] Plugin to inspect.
-
-FLAGS
-  -h, --help     Show CLI help.
-  -v, --verbose
-
-GLOBAL FLAGS
-  --json  Format output as json.
-
-DESCRIPTION
-  Displays installation properties of a plugin.
-
-EXAMPLES
-  $ bitmark plugins:inspect myplugin
-```
-
-## `bitmark plugins:install PLUGIN...`
-
-Installs a plugin into the CLI.
-
-```
-USAGE
-  $ bitmark plugins:install PLUGIN...
-
-ARGUMENTS
-  PLUGIN  Plugin to install.
-
-FLAGS
-  -f, --force    Run yarn install with force flag.
-  -h, --help     Show CLI help.
-  -v, --verbose
-
-DESCRIPTION
-  Installs a plugin into the CLI.
-  Can be installed from npm or a git url.
-
-  Installation of a user-installed plugin will override a core plugin.
-
-  e.g. If you have a core plugin that has a 'hello' command, installing a user-installed plugin with a 'hello' command
-  will override the core plugin implementation. This is useful if a user needs to update core plugin functionality in
-  the CLI without the need to patch and update the whole CLI.
-
-
-ALIASES
-  $ bitmark plugins add
-
-EXAMPLES
-  $ bitmark plugins:install myplugin 
-
-  $ bitmark plugins:install https://github.com/someuser/someplugin
-
-  $ bitmark plugins:install someuser/someplugin
-```
-
-## `bitmark plugins:link PLUGIN`
-
-Links a plugin into the CLI for development.
-
-```
-USAGE
-  $ bitmark plugins:link PLUGIN
-
-ARGUMENTS
-  PATH  [default: .] path to plugin
-
-FLAGS
-  -h, --help     Show CLI help.
-  -v, --verbose
-
-DESCRIPTION
-  Links a plugin into the CLI for development.
-  Installation of a linked plugin will override a user-installed or core plugin.
-
-  e.g. If you have a user-installed or core plugin that has a 'hello' command, installing a linked plugin with a 'hello'
-  command will override the user-installed or core plugin implementation. This is useful for development work.
-
-
-EXAMPLES
-  $ bitmark plugins:link myplugin
-```
-
-## `bitmark plugins:uninstall PLUGIN...`
-
-Removes a plugin from the CLI.
-
-```
-USAGE
-  $ bitmark plugins:uninstall PLUGIN...
-
-ARGUMENTS
-  PLUGIN  plugin to uninstall
-
-FLAGS
-  -h, --help     Show CLI help.
-  -v, --verbose
-
-DESCRIPTION
-  Removes a plugin from the CLI.
-
-ALIASES
-  $ bitmark plugins unlink
-  $ bitmark plugins remove
-```
-
-## `bitmark plugins:uninstall PLUGIN...`
-
-Removes a plugin from the CLI.
-
-```
-USAGE
-  $ bitmark plugins:uninstall PLUGIN...
-
-ARGUMENTS
-  PLUGIN  plugin to uninstall
-
-FLAGS
-  -h, --help     Show CLI help.
-  -v, --verbose
-
-DESCRIPTION
-  Removes a plugin from the CLI.
-
-ALIASES
-  $ bitmark plugins unlink
-  $ bitmark plugins remove
-```
-
-## `bitmark plugins:uninstall PLUGIN...`
-
-Removes a plugin from the CLI.
-
-```
-USAGE
-  $ bitmark plugins:uninstall PLUGIN...
-
-ARGUMENTS
-  PLUGIN  plugin to uninstall
-
-FLAGS
-  -h, --help     Show CLI help.
-  -v, --verbose
-
-DESCRIPTION
-  Removes a plugin from the CLI.
-
-ALIASES
-  $ bitmark plugins unlink
-  $ bitmark plugins remove
-```
-
-## `bitmark plugins update`
-
-Update installed plugins.
-
-```
-USAGE
-  $ bitmark plugins update [-h] [-v]
-
-FLAGS
-  -h, --help     Show CLI help.
-  -v, --verbose
-
-DESCRIPTION
-  Update installed plugins.
-```
 <!-- commandsstop -->
