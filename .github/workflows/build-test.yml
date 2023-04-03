@@ -5,9 +5,9 @@ name: Build & Test
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
   pull_request:
-    branches: [ main ]
+    branches: [main]
 
 jobs:
   build:
@@ -17,24 +17,24 @@ jobs:
         node-version: [16.x]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
     steps:
-    - uses: actions/checkout@v3
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v3
-      with:
-        node-version: ${{ matrix.node-version }}
-        registry-url: 'https://registry.npmjs.org'
-        cache: 'yarn'
-    - name: Setup Yarn
-      run: |
-        yarn config set npmScopes.ncoderz.npmRegistryServer "https://npm.pkg.github.com"
-        yarn config set npmScopes.ncoderz.npmPublishRegistry "https://npm.pkg.github.com"
-        yarn config set npmScopes.ncoderz.npmAlwaysAuth true
-        yarn config set npmScopes.ncoderz.npmAuthToken $GITHUB_AUTH_TOKEN
-      env:
-        GITHUB_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-    - name: Install dependencies
-      run: yarn install --immutable
-    - name: Build
-      run: yarn build
-    - name: Test
-      run: yarn test
+      - uses: actions/checkout@v3
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+          registry-url: 'https://registry.npmjs.org'
+          cache: 'yarn'
+      # - name: Setup Yarn
+      #   run: |
+      #     yarn config set npmScopes.ncoderz.npmRegistryServer "https://npm.pkg.github.com"
+      #     yarn config set npmScopes.ncoderz.npmPublishRegistry "https://npm.pkg.github.com"
+      #     yarn config set npmScopes.ncoderz.npmAlwaysAuth true
+      #     yarn config set npmScopes.ncoderz.npmAuthToken $GITHUB_AUTH_TOKEN
+      #   env:
+      #     GITHUB_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Install dependencies
+        run: yarn install --immutable
+      - name: Build
+        run: yarn build
+      - name: Test
+        run: yarn test
