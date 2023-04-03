@@ -32,37 +32,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@bitmark-standard/bitmark-cli@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "@bitmark-standard/bitmark-cli@workspace:."
-  dependencies:
-    "@getmorebrain/bitmark-generator": ^0.0.1
-    "@oclif/core": ^2
-    "@oclif/plugin-help": ^5
-    "@oclif/plugin-plugins": ^2.4.3
-    "@oclif/test": ^2.3.14
-    "@types/chai": ^4
-    "@types/eslint-plugin-prettier": ^3.1.0
-    "@types/mocha": ^9.0.0
-    "@types/node": ^16.18.23
-    chai: ^4
-    eslint: ^8.37.0
-    eslint-config-prettier: ^8.8.0
-    eslint-plugin-arca: ^0.16.0
-    eslint-plugin-json: ^3.1.0
-    eslint-plugin-prettier: ^4.2.1
-    mocha: ^9
-    oclif: ^3
-    prettier: ^2.8.7
-    shx: ^0.3.4
-    ts-node: ^10.9.1
-    tslib: ^2.5.0
-    typescript: ^5.0.3
-  bin:
-    bitmark: ./bin/run
-  languageName: unknown
-  linkType: soft
-
 "@cspotcode/source-map-support@npm:^0.8.0":
   version: 0.8.1
   resolution: "@cspotcode/source-map-support@npm:0.8.1"
@@ -120,6 +89,37 @@ __metadata:
   checksum: 4059f790e2d07bf3c3ff3e0fec0daa8144fe35c1f6e0111c9921bd32106adaa97a4ab096ad7dab1e28ee6a9060083c4d1a4ada42a7f5f3f7a96b8812e2b757c1
   languageName: node
   linkType: hard
+
+"@getmorebrain/bitmark-cli@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "@getmorebrain/bitmark-cli@workspace:."
+  dependencies:
+    "@getmorebrain/bitmark-generator": ^0.0.1
+    "@oclif/core": ^2
+    "@oclif/plugin-help": ^5
+    "@oclif/plugin-plugins": ^2.4.3
+    "@oclif/test": ^2.3.14
+    "@types/chai": ^4
+    "@types/eslint-plugin-prettier": ^3.1.0
+    "@types/mocha": ^9.0.0
+    "@types/node": ^16.18.23
+    chai: ^4
+    eslint: ^8.37.0
+    eslint-config-prettier: ^8.8.0
+    eslint-plugin-arca: ^0.16.0
+    eslint-plugin-json: ^3.1.0
+    eslint-plugin-prettier: ^4.2.1
+    mocha: ^9
+    oclif: ^3
+    prettier: ^2.8.7
+    shx: ^0.3.4
+    ts-node: ^10.9.1
+    tslib: ^2.5.0
+    typescript: ^5.0.3
+  bin:
+    bitmark: ./bin/run
+  languageName: unknown
+  linkType: soft
 
 "@getmorebrain/bitmark-generator@npm:^0.0.1":
   version: 0.0.1
