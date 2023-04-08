@@ -97,7 +97,7 @@ __metadata:
     "@getmorebrain/bitmark-generator": ^0.0.1
     "@oclif/core": ^2
     "@oclif/plugin-help": ^5
-    "@oclif/plugin-plugins": ^2.4.3
+    "@oclif/plugin-plugins": ^2.4.4
     "@oclif/test": ^2.3.14
     "@types/chai": ^4
     "@types/eslint-plugin-prettier": ^3.1.0
@@ -472,9 +472,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@oclif/plugin-plugins@npm:^2.4.3":
-  version: 2.4.3
-  resolution: "@oclif/plugin-plugins@npm:2.4.3"
+"@oclif/plugin-plugins@npm:^2.4.4":
+  version: 2.4.4
+  resolution: "@oclif/plugin-plugins@npm:2.4.4"
   dependencies:
     "@oclif/color": ^1.0.4
     "@oclif/core": ^2.6.4
@@ -487,7 +487,7 @@ __metadata:
     semver: ^7.3.8
     tslib: ^2.4.1
     yarn: ^1.22.18
-  checksum: e2dd6e95701f4d92097b9f72c6cf714393093e8fd8254fd00dce4928e17652e6d635b1cac93a370e7510ebdd4710d5f81e2d32289ee6160e4ba1ade7f4d897df
+  checksum: 6677bbdea9628ff07dc19ff48b04df8b43523319f60f6611e5b19285908b5626ea7465f36dcb4b1a96c492a9544fce83a75a092b5ec77ed1f253834092509c33
   languageName: node
   linkType: hard
 
