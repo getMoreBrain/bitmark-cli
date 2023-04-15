@@ -98,7 +98,7 @@ __metadata:
     "@oclif/core": ^2
     "@oclif/plugin-help": ^5
     "@oclif/plugin-plugins": ^2.4.3
-    "@oclif/test": ^2.3.14
+    "@oclif/test": ^2.3.15
     "@types/chai": ^4
     "@types/eslint-plugin-prettier": ^3.1.0
     "@types/mocha": ^9.0.0
@@ -506,13 +506,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@oclif/test@npm:^2.3.14":
-  version: 2.3.14
-  resolution: "@oclif/test@npm:2.3.14"
+"@oclif/test@npm:^2.3.15":
+  version: 2.3.15
+  resolution: "@oclif/test@npm:2.3.15"
   dependencies:
     "@oclif/core": ^2.8.0
-    fancy-test: ^2.0.16
-  checksum: 3bf8ab34805fd1090fbf40f24636d30c26fed7787b333cc0ccde584519e5fd3447f28bd60b635bd7eb22b1bf4e70f9f26d6bf622aa578ab08f447f6c0c5240c0
+    fancy-test: ^2.0.18
+  checksum: 20d311197045f3ef8ea6443ebf8b07372319d5299d610618cb39e5f617342a4cb5930fc19af15914095f551cbb8f7cdefbbe4ac8c628fe9feb7e0e288e1290df
   languageName: node
   linkType: hard
 
@@ -2366,7 +2366,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"fancy-test@npm:^2.0.16":
+"fancy-test@npm:^2.0.18":
   version: 2.0.18
   resolution: "fancy-test@npm:2.0.18"
   dependencies:
