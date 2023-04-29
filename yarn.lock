@@ -97,7 +97,7 @@ __metadata:
     "@getmorebrain/bitmark-generator": ^0.0.1
     "@oclif/core": ^2
     "@oclif/plugin-help": ^5
-    "@oclif/plugin-plugins": ^2.4.3
+    "@oclif/plugin-plugins": ^2.4.7
     "@oclif/test": ^2.3.14
     "@types/chai": ^4
     "@types/eslint-plugin-prettier": ^3.1.0
@@ -414,7 +414,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@oclif/core@npm:^2, @oclif/core@npm:^2.6.4, @oclif/core@npm:^2.7.1, @oclif/core@npm:^2.8.0":
+"@oclif/core@npm:^2, @oclif/core@npm:^2.7.1, @oclif/core@npm:^2.8.0":
   version: 2.8.0
   resolution: "@oclif/core@npm:2.8.0"
   dependencies:
@@ -451,6 +451,43 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@oclif/core@npm:^2.8.2":
+  version: 2.8.2
+  resolution: "@oclif/core@npm:2.8.2"
+  dependencies:
+    "@types/cli-progress": ^3.11.0
+    ansi-escapes: ^4.3.2
+    ansi-styles: ^4.3.0
+    cardinal: ^2.1.1
+    chalk: ^4.1.2
+    clean-stack: ^3.0.1
+    cli-progress: ^3.12.0
+    debug: ^4.3.4
+    ejs: ^3.1.8
+    fs-extra: ^9.1.0
+    get-package-type: ^0.1.0
+    globby: ^11.1.0
+    hyperlinker: ^1.0.0
+    indent-string: ^4.0.0
+    is-wsl: ^2.2.0
+    js-yaml: ^3.14.1
+    natural-orderby: ^2.0.3
+    object-treeify: ^1.1.33
+    password-prompt: ^1.1.2
+    semver: ^7.3.7
+    string-width: ^4.2.3
+    strip-ansi: ^6.0.1
+    supports-color: ^8.1.1
+    supports-hyperlinks: ^2.2.0
+    ts-node: ^10.9.1
+    tslib: ^2.5.0
+    widest-line: ^3.1.0
+    wordwrap: ^1.0.0
+    wrap-ansi: ^7.0.0
+  checksum: 8d3bd8064a78f7dc08136da531b19ca5b1fea3a96f7344d93daa0c6eddb731cd2dcd4035f9a6adb489684d8fa08c6cafb846d02c49f322f5d2bef09d1ef334e3
+  languageName: node
+  linkType: hard
+
 "@oclif/plugin-help@npm:^5, @oclif/plugin-help@npm:^5.1.19":
   version: 5.2.9
   resolution: "@oclif/plugin-help@npm:5.2.9"
@@ -472,22 +509,22 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@oclif/plugin-plugins@npm:^2.4.3":
-  version: 2.4.3
-  resolution: "@oclif/plugin-plugins@npm:2.4.3"
+"@oclif/plugin-plugins@npm:^2.4.7":
+  version: 2.4.7
+  resolution: "@oclif/plugin-plugins@npm:2.4.7"
   dependencies:
     "@oclif/color": ^1.0.4
-    "@oclif/core": ^2.6.4
+    "@oclif/core": ^2.8.2
     chalk: ^4.1.2
     debug: ^4.3.4
     fs-extra: ^9.0
     http-call: ^5.2.2
     load-json-file: ^5.3.0
     npm-run-path: ^4.0.1
-    semver: ^7.3.8
+    semver: ^7.5.0
     tslib: ^2.4.1
     yarn: ^1.22.18
-  checksum: e2dd6e95701f4d92097b9f72c6cf714393093e8fd8254fd00dce4928e17652e6d635b1cac93a370e7510ebdd4710d5f81e2d32289ee6160e4ba1ade7f4d897df
+  checksum: 0f25ca7d072a01d6e9d3902882d40ee2e20740b93456b4965eb3e70f3afecdea8a10b0097ae65bdfc8e227d9370d67cbee54c40337a7817d4773ee98329bbea3
   languageName: node
   linkType: hard
 
@@ -5393,6 +5430,17 @@ __metadata:
   bin:
     semver: bin/semver.js
   checksum: ba9c7cbbf2b7884696523450a61fee1a09930d888b7a8d7579025ad93d459b2d1949ee5bbfeb188b2be5f4ac163544c5e98491ad6152df34154feebc2cc337c1
+  languageName: node
+  linkType: hard
+
+"semver@npm:^7.5.0":
+  version: 7.5.0
+  resolution: "semver@npm:7.5.0"
+  dependencies:
+    lru-cache: ^6.0.0
+  bin:
+    semver: bin/semver.js
+  checksum: 2d266937756689a76f124ffb4c1ea3e1bbb2b263219f90ada8a11aebebe1280b13bb76cca2ca96bdee3dbc554cbc0b24752eb895b2a51577aa644427e9229f2b
   languageName: node
   linkType: hard
 
