@@ -102,7 +102,7 @@ __metadata:
     "@types/chai": ^4
     "@types/eslint-plugin-prettier": ^3.1.0
     "@types/mocha": ^9.0.0
-    "@types/node": ^16.18.23
+    "@types/node": ^16.18.29
     chai: ^4
     eslint: ^8.37.0
     eslint-config-prettier: ^8.8.0
@@ -850,10 +850,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:^16.18.23":
-  version: 16.18.23
-  resolution: "@types/node@npm:16.18.23"
-  checksum: 00e51db28fc7a182747f37215b3f25400b1c7a8525e09fa14e55be5798891a118ebf636a49d3197335a3580fcb8222fd4ecc20c2ccff69f1c0d233fc5697465d
+"@types/node@npm:^16.18.29":
+  version: 16.18.29
+  resolution: "@types/node@npm:16.18.29"
+  checksum: fab191333d76dd01d1d5989dfa7cfae5ac46fb4620d860916b19fe680be9f358fb845ca9851fcc5f7e80c408401a27d111e138c831a2ee5d9dacb5220011eeef
   languageName: node
   linkType: hard
 
