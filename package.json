@@ -34,7 +34,7 @@
     "antlr4ts": "0.5.0-alpha.4"
   },
   "dependencies": {
-    "@getmorebrain/bitmark-generator": "^0.0.1",
+    "@getmorebrain/bitmark-parser-generator": "^0.0.4",
     "@oclif/core": "^2",
     "@oclif/plugin-help": "^5",
     "@oclif/plugin-plugins": "^2.4.3"
@@ -68,7 +68,10 @@
     ],
     "devPlugins": [
       "@oclif/plugin-plugins"
-    ]
+    ],
+    "hooks": {
+      "init": "./dist/hooks/init/version"
+    }
   },
   "packageManager": "yarn@3.5.0",
   "engines": {
