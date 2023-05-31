@@ -123,7 +123,7 @@ __metadata:
     prettier: ^2.8.7
     shx: ^0.3.4
     ts-node: ^10.9.1
-    tslib: ^2.5.0
+    tslib: ^2.5.2
     typescript: ^5.0.4
   bin:
     bitmark: ./bin/run
@@ -423,7 +423,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@oclif/core@npm:^2, @oclif/core@npm:^2.8.0, @oclif/core@npm:^2.8.2, @oclif/core@npm:^2.8.4, @oclif/core@npm:^2.8.5":
+"@oclif/core@npm:^2, @oclif/core@npm:^2.8.0, @oclif/core@npm:^2.8.4, @oclif/core@npm:^2.8.5":
   version: 2.8.5
   resolution: "@oclif/core@npm:2.8.5"
   dependencies:
@@ -5451,7 +5451,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"semver@npm:^7.1.1, semver@npm:^7.1.3, semver@npm:^7.2.1, semver@npm:^7.3.2, semver@npm:^7.3.4, semver@npm:^7.3.5, semver@npm:^7.3.7, semver@npm:^7.3.8, semver@npm:^7.5.0, semver@npm:^7.5.1":
+"semver@npm:^7.1.1, semver@npm:^7.1.3, semver@npm:^7.2.1, semver@npm:^7.3.2, semver@npm:^7.3.4, semver@npm:^7.3.5, semver@npm:^7.3.7, semver@npm:^7.3.8, semver@npm:^7.5.1":
   version: 7.5.1
   resolution: "semver@npm:7.5.1"
   dependencies:
@@ -6029,6 +6029,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"tslib@npm:^2.5.2":
+  version: 2.5.2
+  resolution: "tslib@npm:2.5.2"
+  checksum: 4d3c1e238b94127ed0e88aa0380db3c2ddae581dc0f4bae5a982345e9f50ee5eda90835b8bfba99b02df10a5734470be197158c36f9129ac49fdc14a6a9da222
+  languageName: node
+  linkType: hard
+
 "tunnel-agent@npm:^0.6.0":
   version: 0.6.0
   resolution: "tunnel-agent@npm:0.6.0"
@@ -6086,6 +6093,15 @@ __metadata:
   version: 0.8.1
   resolution: "type-fest@npm:0.8.1"
   checksum: d61c4b2eba24009033ae4500d7d818a94fd6d1b481a8111612ee141400d5f1db46f199c014766b9fa9b31a6a7374d96fc748c6d688a78a3ce5a33123839becb7
+  languageName: node
+  linkType: hard
+
+"types-ramda@npm:^0.29.2":
+  version: 0.29.3
+  resolution: "types-ramda@npm:0.29.3"
+  dependencies:
+    ts-toolbelt: ^9.6.0
+  checksum: 2efb5182a02b9b11b0fd960c501c8a3c595f7fe82922526872020868a6a98c788b544c6beccb48360f1af9401d0c7f5e0be9b2ca484987f0339a71f48cec6199
   languageName: node
   linkType: hard
 
