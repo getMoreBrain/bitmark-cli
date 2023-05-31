@@ -49,11 +49,21 @@ export default class Convert extends Command {
       helpGroup: 'JSON Formatting',
       default: 2,
     }),
+    extraProperties: Flags.boolean({
+      description: 'include extra (unknown) properties in the JSON output',
+      helpGroup: 'JSON Formatting',
+    }),
 
     // Bitmark formatting
     explicitTextFormat: Flags.boolean({
-      description: 'Include bitmark text format in bitmark even if it is the default value',
+      description: 'include bitmark text format in bitmark even if it is the default (bitmark--)',
       helpGroup: 'Bitmark Formatting',
+    }),
+    cardSetVersion: Flags.integer({
+      description: 'version of card set to use in bitmark',
+      helpGroup: 'Bitmark Formatting',
+      options: ['1', '2'],
+      default: 1,
     }),
 
     // Parser
