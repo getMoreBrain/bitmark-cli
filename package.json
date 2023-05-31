@@ -44,7 +44,7 @@
     "@types/chai": "^4",
     "@types/eslint-plugin-prettier": "^3.1.0",
     "@types/mocha": "^9.0.0",
-    "@types/node": "^16.18.23",
+    "@types/node": "^16.18.34",
     "chai": "^4",
     "eslint": "^8.41.0",
     "eslint-config-prettier": "^8.8.0",
