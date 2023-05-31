@@ -1,8 +1,8 @@
 import { Args, Command, Flags } from '@oclif/core';
-import { BitmarkTool, Output } from '@getmorebrain/bitmark-generator';
+import { BitmarkParserGenerator, BitmarkParserType, Output } from '@getmorebrain/bitmark-parser-generator';
 import { StringUtils } from '../utils/StringUtils';
 
-const bitmarkTool = new BitmarkTool();
+const bitmarkTool = new BitmarkParserGenerator();
 
 /**
  * Convert command
@@ -27,8 +27,7 @@ export default class Convert extends Command {
     }),
     format: Flags.string({
       char: 'f',
-      description:
-        'output format. If not specified, bitmark is converted to JSON, and JSON / AST is converted to bitmark',
+      description: `output format. If not specified, bitmark is converted to JSON, and JSON / AST is converted to bitmark`,
       // helpValue: 'FORMAT',
       options: [...Object.values(Output)],
     }),
@@ -56,6 +55,14 @@ export default class Convert extends Command {
       description: 'Include bitmark text format in bitmark even if it is the default value',
       helpGroup: 'Bitmark Formatting',
     }),
+
+    // Parser
+    parser: Flags.string({
+      description: `parser to use`,
+      helpGroup: 'Parser Options',
+      options: [...Object.values(BitmarkParserType)],
+      default: BitmarkParserType.peggy,
+    }),
   };
 
   static args = {
@@ -68,9 +75,10 @@ export default class Convert extends Command {
   public async run(): Promise<void> {
     const { args, flags } = await this.parse(Convert);
     const { input } = args;
-    const { output, format, append, pretty, indent, explicitTextFormat } = flags;
+    const { output, format, append, pretty, indent, explicitTextFormat, parser } = flags;
     const prettyIndent = pretty ? Math.max(0, indent) : undefined;
     const outputFormat = Output.fromValue(format);
+    const bitmarkParserType = BitmarkParserType.fromValue(parser);
 
     let dataIn: string;
 
@@ -93,7 +101,8 @@ export default class Convert extends Command {
     // I am coffee toast[_cloze][_gap text][?1 or 2][!verb]`;
 
     let res = await bitmarkTool.convert(dataIn, {
-      output,
+      bitmarkParserType,
+      outputFile: output,
       outputFormat,
       fileOptions: {
         append,
