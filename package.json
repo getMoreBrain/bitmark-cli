@@ -37,7 +37,7 @@
     "@getmorebrain/bitmark-parser-generator": "^0.0.5",
     "@oclif/core": "^2",
     "@oclif/plugin-help": "^5",
-    "@oclif/plugin-plugins": "^2.4.3"
+    "@oclif/plugin-plugins": "^2.4.7"
   },
   "devDependencies": {
     "@oclif/test": "^2.3.14",
