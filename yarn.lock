@@ -124,7 +124,7 @@ __metadata:
     shx: ^0.3.4
     ts-node: ^10.9.1
     tslib: ^2.5.0
-    typescript: ^5.0.3
+    typescript: ^5.0.4
   bin:
     bitmark: ./bin/run
   languageName: unknown
@@ -6049,16 +6049,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"types-ramda@npm:^0.29.2":
-  version: 0.29.2
-  resolution: "types-ramda@npm:0.29.2"
-  dependencies:
-    ts-toolbelt: ^9.6.0
-  checksum: 0b394d4be7d7f110eff2b3c13fe1a648dc14ac22da2acb5575f6621230d43e6bb1067d5a61b9793ba122efe46cda85b9e5eff7bb23d82ffa436e1f24140fff79
-  languageName: node
-  linkType: hard
-
-"typescript@npm:^5.0.3":
+"typescript@npm:^5.0.4":
   version: 5.0.4
   resolution: "typescript@npm:5.0.4"
   bin:
@@ -6068,7 +6059,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@patch:typescript@^5.0.3#~builtin<compat/typescript>":
+"typescript@patch:typescript@^5.0.4#~builtin<compat/typescript>":
   version: 5.0.4
   resolution: "typescript@patch:typescript@npm%3A5.0.4#~builtin<compat/typescript>::version=5.0.4&hash=85af82"
   bin:
