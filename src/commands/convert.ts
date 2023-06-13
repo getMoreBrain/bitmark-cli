@@ -1,4 +1,7 @@
 import { Args, Command, Flags } from '@oclif/core';
+
+import { StringUtils } from '../utils/StringUtils';
+
 import {
   BitmarkParserGenerator,
   BitmarkParserType,
@@ -6,13 +9,13 @@ import {
   CardSetVersion,
   Output,
 } from '@getmorebrain/bitmark-parser-generator';
-import { StringUtils } from '../utils/StringUtils';
 
 const bitmarkTool = new BitmarkParserGenerator();
 
 /**
  * Convert command
  */
+// eslint-disable-next-line arca/no-default-export
 export default class Convert extends Command {
   static description = 'Convert between bitmark formats';
 
