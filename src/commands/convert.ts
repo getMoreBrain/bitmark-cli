@@ -1,5 +1,11 @@
 import { Args, Command, Flags } from '@oclif/core';
-import { BitmarkParserGenerator, BitmarkParserType, Output } from '@getmorebrain/bitmark-parser-generator';
+import {
+  BitmarkParserGenerator,
+  BitmarkParserType,
+  BitmarkVersion,
+  CardSetVersion,
+  Output,
+} from '@getmorebrain/bitmark-parser-generator';
 import { StringUtils } from '../utils/StringUtils';
 
 const bitmarkTool = new BitmarkParserGenerator();
@@ -20,6 +26,13 @@ export default class Convert extends Command {
 
   static flags = {
     // General
+    version: Flags.integer({
+      char: 'v',
+      description: 'version of bitmark to use (default: latest)',
+      helpGroup: 'Bitmark Formatting',
+      options: [...Object.values(BitmarkVersion).map((v) => `${v}`)], // Must convert integer to string for options
+      // default: 1,
+    }),
     output: Flags.file({
       char: 'o',
       description: 'output file. If not specified, output will be to <stdout>',
@@ -49,6 +62,10 @@ export default class Convert extends Command {
       helpGroup: 'JSON Formatting',
       default: 2,
     }),
+    plainText: Flags.boolean({
+      description: 'output text as plain text rather than JSON (default: set by bitmark version)',
+      helpGroup: 'JSON Formatting',
+    }),
     extraProperties: Flags.boolean({
       description: 'include extra (unknown) properties in the JSON output',
       helpGroup: 'JSON Formatting',
@@ -60,10 +77,10 @@ export default class Convert extends Command {
       helpGroup: 'Bitmark Formatting',
     }),
     cardSetVersion: Flags.integer({
-      description: 'version of card set to use in bitmark',
+      description: 'version of card set to use in bitmark (default: set by bitmark version)',
       helpGroup: 'Bitmark Formatting',
-      options: ['1', '2'],
-      default: 1,
+      options: [...Object.values(CardSetVersion).map((v) => `${v}`)], // Must convert integer to string for options
+      // default: 1,
     }),
 
     // Parser
@@ -85,7 +102,19 @@ export default class Convert extends Command {
   public async run(): Promise<void> {
     const { args, flags } = await this.parse(Convert);
     const { input } = args;
-    const { output, format, append, pretty, indent, explicitTextFormat, parser } = flags;
+    const {
+      version,
+      output,
+      format,
+      append,
+      pretty,
+      indent,
+      plainText,
+      extraProperties,
+      explicitTextFormat,
+      cardSetVersion,
+      parser,
+    } = flags;
     const prettyIndent = pretty ? Math.max(0, indent) : undefined;
     const outputFormat = Output.fromValue(format);
     const bitmarkParserType = BitmarkParserType.fromValue(parser);
@@ -111,6 +140,7 @@ export default class Convert extends Command {
     // I am coffee toast[_cloze][_gap text][?1 or 2][!verb]`;
 
     let res = await bitmarkTool.convert(dataIn, {
+      bitmarkVersion: BitmarkVersion.fromValue(version),
       bitmarkParserType,
       outputFile: output,
       outputFormat,
@@ -119,9 +149,12 @@ export default class Convert extends Command {
       },
       jsonOptions: {
         prettify: prettyIndent,
+        textAsPlainText: plainText ?? undefined, // undefined means use default
+        includeExtraProperties: extraProperties,
       },
       bitmarkOptions: {
         explicitTextFormat,
+        cardSetVersion: CardSetVersion.fromValue(cardSetVersion),
       },
     });
 

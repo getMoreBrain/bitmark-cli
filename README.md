@@ -12,11 +12,11 @@ Bitmark command line tool.
 # Usage
 <!-- usage -->
 ```sh-session
-$ npm install -g bitmark-cli
+$ npm install -g @getmorebrain/bitmark-cli
 $ bitmark COMMAND
 running command...
 $ bitmark (--version)
-bitmark-cli/0.0.2 darwin-x64 node-v16.19.1
+@getmorebrain/bitmark-cli/1.0.0 darwin-x64 node-v16.19.1
 $ bitmark --help [COMMAND]
 USAGE
   $ bitmark COMMAND
@@ -34,8 +34,8 @@ Convert between bitmark formats
 
 ```
 USAGE
-  $ bitmark convert [INPUT] [-f bitmark|json|ast] [-a -o <value>] [-p] [--indent <value>]
-    [--explicitTextFormat]
+  $ bitmark convert [INPUT] [-v 2|3] [-f bitmark|json|ast] [-a -o <value>] [-p] [--indent <value>]
+    [--plainText] [--extraProperties] [--explicitTextFormat] [--cardSetVersion 1|2] [--parser antlr|peggy]
 
 ARGUMENTS
   INPUT  file to read, or bitmark or json string. If not specified, input will be from <stdin>
@@ -48,11 +48,21 @@ FLAGS
   -o, --output=FILE      output file. If not specified, output will be to <stdout>
 
 JSON FORMATTING FLAGS
-  -p, --pretty     prettify the JSON output with indent
-  --indent=INDENT  [default: 2] prettify indent
+  -p, --pretty       prettify the JSON output with indent
+  --extraProperties  include extra (unknown) properties in the JSON output
+  --indent=INDENT    [default: 2] prettify indent
+  --plainText        output text as plain text rather than JSON (default: set by bitmark version)
 
 BITMARK FORMATTING FLAGS
-  --explicitTextFormat  Include bitmark text format in bitmark even if it is the default value
+  -v, --version=<option>     version of bitmark to use (default: latest)
+                             <options: 2|3>
+  --cardSetVersion=<option>  version of card set to use in bitmark (default: set by bitmark version)
+                             <options: 1|2>
+  --explicitTextFormat       include bitmark text format in bitmark even if it is the default (bitmark--)
+
+PARSER OPTIONS FLAGS
+  --parser=<option>  [default: peggy] parser to use
+                     <options: antlr|peggy>
 
 DESCRIPTION
   Convert between bitmark formats
@@ -61,9 +71,15 @@ EXAMPLES
   $ bitmark convert '[.article] Hello World'
 
   $ bitmark convert '[{"bitmark": "[.article] Hello World","bit": { "type": "article", "format": "bitmark--", "body": "Hello World" }}]'
+
+  $ bitmark convert input.json -o output.bit
+
+  $ bitmark convert input.bit -o output.json
+
+  $ bitmark convert -f ast input.json -o output.ast.json
 ```
 
-_See code: [dist/commands/convert.ts](https://github.com/bitmark-standard/bitmark-cli/blob/v0.0.2/dist/commands/convert.ts)_
+_See code: [dist/commands/convert.ts](https://github.com/bitmark-standard/bitmark-cli/blob/v1.0.0/dist/commands/convert.ts)_
 
 ## `bitmark help [COMMANDS]`
 
@@ -83,5 +99,5 @@ DESCRIPTION
   Display help for bitmark.
 ```
 
-_See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v5.2.8/src/commands/help.ts)_
+_See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v5.2.9/src/commands/help.ts)_
 <!-- commandsstop -->
