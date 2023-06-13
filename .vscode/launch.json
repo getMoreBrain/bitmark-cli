@@ -1,25 +1,25 @@
 {
   "version": "1.0.0",
   "configurations": [
-      {
-          "type": "node",
-          "request": "launch",
-          "name": "'convert'",
-          "skipFiles": [
-              "<node_internals>/**"
-          ],
-          "program": "${workspaceFolder}/bin/dev",
-          "args": [
-            "convert",
-            "-f",
-            "ast",
-            "[{\"bitmark\": \"[.article] Hello World\",\"bit\": { \"type\": \"article\", \"format\": \"bitmark--\", \"body\": \"Hello World\" }}]"
-          ],
-          // "env": {
-          //   "DEBUG": "*"
-          // },
-          "console": "integratedTerminal",
-          "sourceMaps": true,
-      }
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "'convert'",
+      "skipFiles": ["<node_internals>/**"],
+      "program": "${workspaceFolder}/bin/dev",
+      "args": [
+        "convert",
+        // "-v",
+        // "2",
+        "-f",
+        "ast",
+        "[{\"bitmark\": \"[.article] Hello World\",\"bit\": { \"type\": \"article\", \"format\": \"bitmark--\", \"body\": \"Hello World\" }}]"
+      ],
+      // "env": {
+      //   "DEBUG": "*"
+      // },
+      "console": "integratedTerminal",
+      "sourceMaps": true
+    }
   ]
 }

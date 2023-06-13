@@ -1,8 +1,9 @@
-import { Hook } from '@oclif/core';
 import { BitmarkParserGenerator } from '@getmorebrain/bitmark-parser-generator';
+import { Hook } from '@oclif/core';
 
 const bitmarkTool = new BitmarkParserGenerator();
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 const hook: Hook<'init'> = async function (opts: any) {
   const versionString = `Bitmark CLI v${opts.config.version} (bitmark-parser-generator v${bitmarkTool.version()})`;
 
@@ -16,4 +17,5 @@ const hook: Hook<'init'> = async function (opts: any) {
   opts.config.userAgent = versionString;
 };
 
+// eslint-disable-next-line arca/no-default-export
 export default hook;

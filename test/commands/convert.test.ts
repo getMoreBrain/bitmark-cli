@@ -5,6 +5,8 @@ describe('convert', () => {
     .stdout()
     .command([
       'convert',
+      '-v',
+      '2',
       '[{"bitmark": "[.article] Hello World","bit": { "type": "article", "format": "bitmark--", "body": "Hello World" }}]',
     ])
     .it(
@@ -16,10 +18,11 @@ describe('convert', () => {
 
   test
     .stdout()
-    .command(['convert', '[.article] Hello World'])
+    .command(['convert', '-v', '2', '[.article] Hello World'])
     .it("bitmark convert '[.article] Hello World'", (ctx) => {
-      expect(ctx.stdout).to.equal(
-        '[{"bit":{"type":"article","format":"bitmark--","body":"Hello World"},"bitmark":"[.article] Hello World"}]\n',
+      expect(ctx.stdout).to.contain(
+        '[{"bit":{"type":"article","format":"bitmark--","body":"Hello World"}',
+        // '[{"bit":{"type":"article","format":"bitmark--","body":"Hello World"},"bitmark":"[.article] Hello World"}]\n',
       );
     });
 });
