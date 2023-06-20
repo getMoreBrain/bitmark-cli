@@ -110,7 +110,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@getmorebrain/bitmark-cli@workspace:."
   dependencies:
-    "@getmorebrain/bitmark-parser-generator": ^1.0.3
+    "@getmorebrain/bitmark-parser-generator": ^1.0.4
     "@oclif/core": ^2
     "@oclif/plugin-help": ^5
     "@oclif/plugin-plugins": ^3.1.3
@@ -139,15 +139,15 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@getmorebrain/bitmark-parser-generator@npm:^1.0.3":
-  version: 1.0.3
-  resolution: "@getmorebrain/bitmark-parser-generator@npm:1.0.3::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40getmorebrain%2Fbitmark-parser-generator%2F1.0.3%2F256cc9538442611ec411861492cca49fc35267b9"
+"@getmorebrain/bitmark-parser-generator@npm:^1.0.4":
+  version: 1.0.4
+  resolution: "@getmorebrain/bitmark-parser-generator@npm:1.0.4::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40getmorebrain%2Fbitmark-parser-generator%2F1.0.4%2Fbec30e77f1d5659f4419c56545e13bb8ee0c47bf"
   dependencies:
     "@ncoderz/superenum": ^0.2.0
     "@types/fs-extra": ^11.0.1
     bitmark-grammar: 1.0.74
     fs-extra: ^11.1.1
-  checksum: 65ad2c73b5b8e0224bb782cc34bd6e29ac90c872e510b386f5be515f237664aa63e15b8501d1aafff165b749a12aec4fb3781739a148bca5a276a553924e480e
+  checksum: b8c4297f6d3a7fab6489bb8532693c7e1fb80f075ceb4da29f4b701b8dae59df59f144612ef8c2d0315d807d7c8f61b9696dc4e37af75e640b359558085b6f22
   languageName: node
   linkType: hard
 
