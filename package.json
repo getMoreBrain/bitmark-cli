@@ -1,6 +1,6 @@
 {
   "name": "@getmorebrain/bitmark-cli",
-  "version": "1.0.5",
+  "version": "1.0.7",
   "description": "Bitmark comand line interface",
   "author": "Richard Sewell",
   "license": "ISC",
@@ -38,7 +38,7 @@
     "npm-exists": "https://registry.yarnpkg.com/@favware/skip-dependency/-/skip-dependency-1.2.1.tgz"
   },
   "dependencies": {
-    "@getmorebrain/bitmark-parser-generator": "^1.0.5",
+    "@getmorebrain/bitmark-parser-generator": "^1.0.7",
     "@oclif/core": "^2",
     "@oclif/plugin-help": "^5",
     "@oclif/plugin-plugins": "^3.1.3"
