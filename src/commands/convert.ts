@@ -32,7 +32,6 @@ export default class Convert extends Command {
     version: Flags.integer({
       char: 'v',
       description: 'version of bitmark to use (default: latest)',
-      helpGroup: 'Bitmark Formatting',
       options: [...Object.values(BitmarkVersion).map((v) => `${v}`)], // Must convert integer to string for options
       // default: 1,
     }),
@@ -52,6 +51,10 @@ export default class Convert extends Command {
       description: 'append to the output file (default is to overwrite)',
       dependsOn: ['output'],
     }),
+    warnings: Flags.boolean({
+      char: 'w',
+      description: 'enable warnings in the output',
+    }),
 
     // JSON formatting
     pretty: Flags.boolean({
@@ -69,8 +72,8 @@ export default class Convert extends Command {
       description: 'output text as plain text rather than JSON (default: set by bitmark version)',
       helpGroup: 'JSON Formatting',
     }),
-    extraProperties: Flags.boolean({
-      description: 'include extra (unknown) properties in the JSON output',
+    excludeUnknownProperties: Flags.boolean({
+      description: 'exclude unknown properties in the JSON output',
       helpGroup: 'JSON Formatting',
     }),
 
@@ -110,10 +113,11 @@ export default class Convert extends Command {
       output,
       format,
       append,
+      warnings,
       pretty,
       indent,
       plainText,
-      extraProperties,
+      excludeUnknownProperties,
       explicitTextFormat,
       cardSetVersion,
       parser,
@@ -151,9 +155,10 @@ export default class Convert extends Command {
         append,
       },
       jsonOptions: {
+        enableWarnings: warnings,
         prettify: prettyIndent,
         textAsPlainText: plainText ?? undefined, // undefined means use default
-        includeExtraProperties: extraProperties,
+        excludeUnknownProperties: excludeUnknownProperties,
       },
       bitmarkOptions: {
         explicitTextFormat,
