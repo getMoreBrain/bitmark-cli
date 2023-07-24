@@ -16,7 +16,7 @@ $ npm install -g @gmb/bitmark-cli
 $ bitmark COMMAND
 running command...
 $ bitmark (--version)
-@gmb/bitmark-cli/1.0.12 darwin-x64 node-v16.19.1
+@gmb/bitmark-cli/1.0.15 darwin-x64 node-v16.19.1
 $ bitmark --help [COMMAND]
 USAGE
   $ bitmark COMMAND
