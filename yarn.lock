@@ -106,9 +106,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@getmorebrain/bitmark-cli@workspace:.":
+"@getmorebrain/bitmark-parser-generator@npm:^1.0.11":
+  version: 1.0.11
+  resolution: "@getmorebrain/bitmark-parser-generator@npm:1.0.11::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40getmorebrain%2Fbitmark-parser-generator%2F1.0.11%2F37512b5e9bf393a873f29208cf74c95279f8595f"
+  dependencies:
+    "@ncoderz/superenum": ^0.2.0
+    "@types/fs-extra": ^11.0.1
+    bitmark-grammar: 1.0.74
+    fs-extra: ^11.1.1
+  checksum: a0c39aaa0689d95d3a4ae70d310f496538e3e9c875b366f75d6a0446cfa051f8d5ff7a1af48430b53f9e8c457ffa3a432c337c9ad8b59f86067d34e0fb5e4dcf
+  languageName: node
+  linkType: hard
+
+"@gmb/bitmark-cli@workspace:.":
   version: 0.0.0-use.local
-  resolution: "@getmorebrain/bitmark-cli@workspace:."
+  resolution: "@gmb/bitmark-cli@workspace:."
   dependencies:
     "@getmorebrain/bitmark-parser-generator": ^1.0.11
     "@oclif/core": ^2
@@ -138,18 +150,6 @@ __metadata:
     bitmark: ./bin/run
   languageName: unknown
   linkType: soft
-
-"@getmorebrain/bitmark-parser-generator@npm:^1.0.11":
-  version: 1.0.11
-  resolution: "@getmorebrain/bitmark-parser-generator@npm:1.0.11::__archiveUrl=https%3A%2F%2Fnpm.pkg.github.com%2Fdownload%2F%40getmorebrain%2Fbitmark-parser-generator%2F1.0.11%2F37512b5e9bf393a873f29208cf74c95279f8595f"
-  dependencies:
-    "@ncoderz/superenum": ^0.2.0
-    "@types/fs-extra": ^11.0.1
-    bitmark-grammar: 1.0.74
-    fs-extra: ^11.1.1
-  checksum: a0c39aaa0689d95d3a4ae70d310f496538e3e9c875b366f75d6a0446cfa051f8d5ff7a1af48430b53f9e8c457ffa3a432c337c9ad8b59f86067d34e0fb5e4dcf
-  languageName: node
-  linkType: hard
 
 "@humanwhocodes/config-array@npm:^0.11.10":
   version: 0.11.10
