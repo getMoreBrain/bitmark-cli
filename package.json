@@ -1,5 +1,5 @@
 {
-  "name": "@getmorebrain/bitmark-cli",
+  "name": "@gmb/bitmark-cli",
   "version": "1.0.12",
   "description": "Bitmark comand line interface",
   "author": "Richard Sewell",
