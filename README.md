@@ -1,4 +1,4 @@
-@bitmark-standard/bitmark-cli
+@gmb/bitmark-cli
 =================
 
 ![Build & Test](https://github.com/getMoreBrain/bitmark-cli/actions/workflows/build-test.yml/badge.svg?branch=main)
@@ -12,11 +12,11 @@ Bitmark command line tool.
 # Usage
 <!-- usage -->
 ```sh-session
-$ npm install -g @getmorebrain/bitmark-cli
+$ npm install -g @gmb/bitmark-cli
 $ bitmark COMMAND
 running command...
 $ bitmark (--version)
-@getmorebrain/bitmark-cli/1.0.11 darwin-x64 node-v16.19.1
+@gmb/bitmark-cli/1.0.12 darwin-x64 node-v16.19.1
 $ bitmark --help [COMMAND]
 USAGE
   $ bitmark COMMAND
@@ -80,7 +80,7 @@ EXAMPLES
   $ bitmark convert -f ast input.json -o output.ast.json
 ```
 
-_See code: [dist/commands/convert.ts](https://github.com/bitmark-standard/bitmark-cli/blob/v1.0.11/dist/commands/convert.ts)_
+_See code: [dist/commands/convert.ts](https://github.com/getMoreBrain/bitmark-cli/blob/v1.0.12/dist/commands/convert.ts)_
 
 ## `bitmark help [COMMANDS]`
 

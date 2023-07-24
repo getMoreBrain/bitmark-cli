@@ -8,7 +8,7 @@ import {
   BitmarkVersion,
   CardSetVersion,
   Output,
-} from '@getmorebrain/bitmark-parser-generator';
+} from '@gmb/bitmark-parser-generator';
 
 const bitmarkTool = new BitmarkParserGenerator();
 

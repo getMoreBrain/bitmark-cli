@@ -4,8 +4,7 @@
   "description": "Bitmark comand line interface",
   "author": "Richard Sewell",
   "license": "ISC",
-  "homepage": "https://github.com/bitmark-standard/bitmark-cli#readme",
-  "repository": "bitmark-standard/bitmark-cli",
+  "homepage": "https://github.com/getMoreBrain/bitmark-cli#readme",
   "bin": {
     "bitmark": "./bin/run"
   },
@@ -16,6 +15,10 @@
     "/npm-shrinkwrap.json",
     "/oclif.manifest.json"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/getMoreBrain/bitmark-cli.git"
+  },
   "scripts": {
     "start": "node ./bin/dev",
     "build": "run clean && run lint && tsc -b",

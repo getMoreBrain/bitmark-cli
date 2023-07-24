@@ -1,4 +1,4 @@
-import { BitmarkParserGenerator } from '@getmorebrain/bitmark-parser-generator';
+import { BitmarkParserGenerator } from '@gmb/bitmark-parser-generator';
 import { Hook } from '@oclif/core';
 
 const bitmarkTool = new BitmarkParserGenerator();
