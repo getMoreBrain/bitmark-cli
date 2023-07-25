@@ -3,7 +3,7 @@
 
 ![Build & Test](https://github.com/getMoreBrain/bitmark-cli/actions/workflows/build-test.yml/badge.svg?branch=main)
 
-Bitmark command line tool.
+bitmark command line tool.
 
 <!-- toc -->
 * [Usage](#usage)
