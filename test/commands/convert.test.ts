@@ -16,13 +16,22 @@ describe('convert', () => {
       },
     );
 
+  // Peggy parser
   test
     .stdout()
     .command(['convert', '-v', '2', '[.article] Hello World'])
     .it("bitmark convert '[.article] Hello World'", (ctx) => {
       expect(ctx.stdout).to.contain(
-        '[{"bit":{"type":"article","format":"bitmark--","body":"Hello World"}',
+        '"bit":{"type":"article","format":"bitmark--","body":"Hello World"}',
         // '[{"bit":{"type":"article","format":"bitmark--","body":"Hello World"},"bitmark":"[.article] Hello World"}]\n',
       );
+    });
+
+  // ANTLR parser
+  test
+    .stdout()
+    .command(['convert', '--parser', 'antlr', '[.article] Hello World'])
+    .it("bitmark convert '[.article] Hello World'", (ctx) => {
+      expect(ctx.stdout).to.contain('"bit":{"type":"article","format":"bitmark--","body":"Hello World"}');
     });
 });

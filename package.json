@@ -1,6 +1,6 @@
 {
   "name": "@gmb/bitmark-cli",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "Bitmark comand line interface",
   "author": "Richard Sewell",
   "license": "ISC",
