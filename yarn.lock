@@ -110,7 +110,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@gmb/bitmark-cli@workspace:."
   dependencies:
-    "@gmb/bitmark-parser-generator": ^1.2.1
+    "@gmb/bitmark-parser-generator": ^1.2.3
     "@oclif/core": ^2
     "@oclif/plugin-help": ^5
     "@oclif/plugin-plugins": ^3.1.3
@@ -139,15 +139,15 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@gmb/bitmark-parser-generator@npm:^1.2.1":
-  version: 1.2.1
-  resolution: "@gmb/bitmark-parser-generator@npm:1.2.1"
+"@gmb/bitmark-parser-generator@npm:^1.2.3":
+  version: 1.2.3
+  resolution: "@gmb/bitmark-parser-generator@npm:1.2.3"
   dependencies:
     "@ncoderz/superenum": ^0.2.0
     "@types/fs-extra": ^11.0.1
-    bitmark-grammar: 1.0.74
+    bitmark-grammar: 1.0.92
     fs-extra: ^11.1.1
-  checksum: 5f149151cc3101722e8b2e4cfcfec9cb10c9fc7d9e695f761efe0f12a5b8217aee750955724b27df918480f3331ac0ddfb06b842b9189fa91fd61a014d8e35e1
+  checksum: 3226ea3d0c22bbc02bed2057dce812f1f1525abe243b2c45b3bebdc6d6a57c9c644c62859a40557f8faf9cdd62a44aac76076bf98b5eb2aedc367a040b2e465a
   languageName: node
   linkType: hard
 
@@ -1682,9 +1682,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"bitmark-grammar@npm:1.0.74":
-  version: 1.0.74
-  resolution: "bitmark-grammar@npm:1.0.74"
+"bitmark-grammar@npm:1.0.92":
+  version: 1.0.92
+  resolution: "bitmark-grammar@npm:1.0.92"
   dependencies:
     "@types/diff": ^5.0.3
     antlr4ts: ^0.5.0-alpha.4
@@ -1697,7 +1697,7 @@ __metadata:
     ramda: ^0.28.0
     safe-buffer: ^5.2.1
     utf8-length: 0.0.1
-  checksum: f26740a617226aef500ceb35806e757f99e73380419e1eafa4803b62f241c046645eab6dde8ea297c03043aafc53ca296b8d11f124c88cc11e8f5219b687428f
+  checksum: 847c5f6a6b6bab2e57bdbc2b71e336defeb00a3354e9864effb58abe54244986ccb7f2c2fe0be93d19f031736006f27de883577909d6c84c8a0809f501f3894c
   languageName: node
   linkType: hard
 

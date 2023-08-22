@@ -3,6 +3,8 @@
 
 ![Build & Test](https://github.com/getMoreBrain/bitmark-cli/actions/workflows/build-test.yml/badge.svg?branch=main)
 
+[Try out bitmark - visit the bitmark Playground](https://getmorebrain.github.io/bitmark-playground/)
+
 bitmark command line tool.
 
 <!-- toc -->
@@ -25,8 +27,11 @@ USAGE
 <!-- usagestop -->
 # Commands
 <!-- commands -->
-* [`bitmark convert [INPUT]`](#bitmark-convert-input)
-* [`bitmark help [COMMANDS]`](#bitmark-help-commands)
+- [@gmb/bitmark-cli](#gmbbitmark-cli)
+- [Usage](#usage)
+- [Commands](#commands)
+  - [`bitmark convert [INPUT]`](#bitmark-convert-input)
+  - [`bitmark help [COMMANDS]`](#bitmark-help-commands)
 
 ## `bitmark convert [INPUT]`
 
