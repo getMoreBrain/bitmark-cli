@@ -15,10 +15,11 @@
     "moduleResolution": "node",
     "isolatedModules": false,
     "importHelpers": true,
-    "rootDir": "src",
+    "rootDir": "src"
   },
-  "include": [
-    "src/**/*.ts"
-  ],
+  "include": ["src/**/*.ts"],
   "exclude": ["node_modules"],
+  "ts-node": {
+    "files": true
+  }
 }
