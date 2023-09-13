@@ -1,4 +1,7 @@
 import { Args, Command, Flags } from '@oclif/core';
+import { parse as antlrParse } from 'bitmark-grammar';
+import * as fs from 'fs-extra';
+import * as path from 'path';
 
 import { StringUtils } from '../utils/StringUtils';
 
@@ -93,7 +96,7 @@ export default class Convert extends Command {
     parser: Flags.string({
       description: `parser to use`,
       helpGroup: 'Parser Options',
-      options: [...Object.values(BitmarkParserType)],
+      options: [...Object.values(BitmarkParserType), 'antlr'],
       default: BitmarkParserType.peggy,
     }),
   };
@@ -124,7 +127,7 @@ export default class Convert extends Command {
     } = flags;
     const prettyIndent = pretty ? Math.max(0, indent) : undefined;
     const outputFormat = Output.fromValue(format);
-    const bitmarkParserType = BitmarkParserType.fromValue(parser);
+    const bitmarkParserType = parser === 'antlr' ? 'antlr' : BitmarkParserType.fromValue(parser);
 
     let dataIn: string;
 
@@ -146,25 +149,45 @@ export default class Convert extends Command {
 
     // I am coffee toast[_cloze][_gap text][?1 or 2][!verb]`;
 
-    let res = await bitmarkTool.convert(dataIn, {
-      bitmarkVersion: BitmarkVersion.fromValue(version),
-      bitmarkParserType,
-      outputFile: output,
-      outputFormat,
-      fileOptions: {
-        append,
-      },
-      jsonOptions: {
-        enableWarnings: warnings,
-        prettify: prettyIndent,
-        textAsPlainText: plainText ?? undefined, // undefined means use default
-        excludeUnknownProperties: excludeUnknownProperties,
-      },
-      bitmarkOptions: {
-        explicitTextFormat,
-        cardSetVersion: CardSetVersion.fromValue(cardSetVersion),
-      },
-    });
+    let res: string | unknown;
+
+    if (bitmarkParserType === 'antlr') {
+      // Antlr parser
+      const jsonStr = antlrParse(dataIn);
+      res = JSON.parse(jsonStr);
+
+      if (output) {
+        const jsonPrettyStr = JSON.stringify(res, null, prettyIndent);
+
+        // Write JSON to file
+        const flag = append ? 'a' : 'w';
+        fs.ensureDirSync(path.dirname(output));
+        fs.writeFileSync(output, jsonPrettyStr, {
+          flag,
+        });
+      }
+    } else {
+      // Peggy parser
+      res = await bitmarkTool.convert(dataIn, {
+        bitmarkVersion: BitmarkVersion.fromValue(version),
+        bitmarkParserType,
+        outputFile: output,
+        outputFormat,
+        fileOptions: {
+          append,
+        },
+        jsonOptions: {
+          enableWarnings: warnings,
+          prettify: prettyIndent,
+          textAsPlainText: plainText ?? undefined, // undefined means use default
+          excludeUnknownProperties: excludeUnknownProperties,
+        },
+        bitmarkOptions: {
+          explicitTextFormat,
+          cardSetVersion: CardSetVersion.fromValue(cardSetVersion),
+        },
+      });
+    }
 
     if (!output) {
       try {
