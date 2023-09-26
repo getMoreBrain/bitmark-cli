@@ -38,21 +38,11 @@ export default class Convert extends Command {
       options: [...Object.values(BitmarkVersion).map((v) => `${v}`)], // Must convert integer to string for options
       // default: 1,
     }),
-    output: Flags.file({
-      char: 'o',
-      description: 'output file. If not specified, output will be to <stdout>',
-      helpValue: 'FILE',
-    }),
     format: Flags.string({
       char: 'f',
       description: `output format. If not specified, bitmark is converted to JSON, and JSON / AST is converted to bitmark`,
       // helpValue: 'FORMAT',
       options: [...Object.values(Output)],
-    }),
-    append: Flags.boolean({
-      char: 'a',
-      description: 'append to the output file (default is to overwrite)',
-      dependsOn: ['output'],
     }),
     warnings: Flags.boolean({
       char: 'w',
@@ -66,10 +56,10 @@ export default class Convert extends Command {
       helpGroup: 'JSON Formatting',
     }),
     indent: Flags.integer({
-      description: 'prettify indent',
+      description: 'prettify indent (default:2)',
       helpValue: 'INDENT',
       helpGroup: 'JSON Formatting',
-      default: 2,
+      dependsOn: ['pretty'],
     }),
     plainText: Flags.boolean({
       description: 'output text as plain text rather than JSON (default: set by bitmark version)',
@@ -90,6 +80,20 @@ export default class Convert extends Command {
       helpGroup: 'Bitmark Formatting',
       options: [...Object.values(CardSetVersion).map((v) => `${v}`)], // Must convert integer to string for options
       // default: 1,
+    }),
+
+    // File output
+    output: Flags.file({
+      helpGroup: 'File output',
+      char: 'o',
+      description: 'output file. If not specified, output will be to <stdout>',
+      helpValue: 'FILE',
+    }),
+    append: Flags.boolean({
+      helpGroup: 'File output',
+      char: 'a',
+      description: 'append to the output file (default is to overwrite)',
+      dependsOn: ['output'],
     }),
 
     // Parser
@@ -125,7 +129,7 @@ export default class Convert extends Command {
       cardSetVersion,
       parser,
     } = flags;
-    const prettyIndent = pretty ? Math.max(0, indent) : undefined;
+    const prettyIndent = pretty ? Math.max(0, indent ?? 2) : undefined;
     const outputFormat = Output.fromValue(format);
     const bitmarkParserType = parser === 'antlr' ? 'antlr' : BitmarkParserType.fromValue(parser);
 
