@@ -1,6 +1,6 @@
 {
   "name": "@gmb/bitmark-cli",
-  "version": "1.4.2",
+  "version": "1.4.3",
   "description": "Bitmark comand line interface",
   "author": "Richard Sewell",
   "license": "ISC",
@@ -41,11 +41,11 @@
     "npm-exists": "https://registry.yarnpkg.com/@favware/skip-dependency/-/skip-dependency-1.2.1.tgz"
   },
   "dependencies": {
-    "@gmb/bitmark-parser-generator": "^1.4.2",
+    "@gmb/bitmark-parser-generator": "^1.4.3",
     "@oclif/core": "^2",
     "@oclif/plugin-help": "^5",
     "@oclif/plugin-plugins": "^3.8.0",
-    "bitmark-grammar": "1.0.95"
+    "bitmark-grammar": "1.0.96"
   },
   "devDependencies": {
     "@oclif/test": "^2.5.6",
