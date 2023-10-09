@@ -18,7 +18,7 @@ $ npm install -g @gmb/bitmark-cli
 $ bitmark COMMAND
 running command...
 $ bitmark (--version)
-@gmb/bitmark-cli/1.4.1 darwin-x64 node-v18.14.2
+@gmb/bitmark-cli/1.4.4 darwin-x64 node-v18.14.2
 $ bitmark --help [COMMAND]
 USAGE
   $ bitmark COMMAND
@@ -85,7 +85,7 @@ EXAMPLES
   $ bitmark convert -f ast input.json -o output.ast.json
 ```
 
-_See code: [dist/commands/convert.ts](https://github.com/getMoreBrain/bitmark-cli/blob/v1.4.1/dist/commands/convert.ts)_
+_See code: [src/commands/convert.ts](https://github.com/getMoreBrain/bitmark-cli/blob/v1.4.4/src/commands/convert.ts)_
 
 ## `bitmark help [COMMANDS]`
 
@@ -105,7 +105,7 @@ DESCRIPTION
   Display help for bitmark.
 ```
 
-_See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v5.2.10/src/commands/help.ts)_
+_See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v5.2.20/src/commands/help.ts)_
 
 ## `bitmark info [INFO]`
 
@@ -149,5 +149,5 @@ EXAMPLES
   $ bitmark info -f json -p bit --bit=still-image-film
 ```
 
-_See code: [dist/commands/info.ts](https://github.com/getMoreBrain/bitmark-cli/blob/v1.4.1/dist/commands/info.ts)_
+_See code: [src/commands/info.ts](https://github.com/getMoreBrain/bitmark-cli/blob/v1.4.4/src/commands/info.ts)_
 <!-- commandsstop -->
