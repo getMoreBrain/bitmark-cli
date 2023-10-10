@@ -142,17 +142,6 @@ export default class Convert extends Command {
       dataIn = await this.readStream(process.stdin);
     }
 
-    // const name = flags.name ?? 'world';
-    // this.log(`hello ${name} from /Users/sewell/dev/getMoreBrain/git/bitmark-cli/src/commands/convert.ts`);
-    // if (args.file && flags.force) {
-    //   this.log(`you input --force and --file: ${args.file}`);
-    // }
-
-    // const json = `[.cloze]
-    // [%cl1]
-
-    // I am coffee toast[_cloze][_gap text][?1 or 2][!verb]`;
-
     let res: string | unknown;
 
     if (bitmarkParserType === 'antlr') {
@@ -171,7 +160,7 @@ export default class Convert extends Command {
         });
       }
     } else {
-      // Peggy parser
+      // Bitmark tool conversion (Peggy parser)
       res = await bitmarkTool.convert(dataIn, {
         bitmarkVersion: BitmarkVersion.fromValue(version),
         bitmarkParserType,

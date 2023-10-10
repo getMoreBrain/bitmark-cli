@@ -18,7 +18,7 @@ $ npm install -g @gmb/bitmark-cli
 $ bitmark COMMAND
 running command...
 $ bitmark (--version)
-@gmb/bitmark-cli/1.4.4 darwin-x64 node-v18.14.2
+@gmb/bitmark-cli/1.4.6 darwin-x64 node-v18.14.2
 $ bitmark --help [COMMAND]
 USAGE
   $ bitmark COMMAND
@@ -27,9 +27,38 @@ USAGE
 <!-- usagestop -->
 # Commands
 <!-- commands -->
+* [`bitmark breakscape [INPUT]`](#bitmark-breakscape-input)
 * [`bitmark convert [INPUT]`](#bitmark-convert-input)
+* [`bitmark convertText [INPUT]`](#bitmark-converttext-input)
 * [`bitmark help [COMMANDS]`](#bitmark-help-commands)
 * [`bitmark info [INFO]`](#bitmark-info-info)
+* [`bitmark unbreakscape [INPUT]`](#bitmark-unbreakscape-input)
+
+## `bitmark breakscape [INPUT]`
+
+Breakscape text
+
+```
+USAGE
+  $ bitmark breakscape [INPUT] [-a -o <value>]
+
+ARGUMENTS
+  INPUT  file to read, or text. If not specified, input will be from <stdin>
+
+FILE OUTPUT FLAGS
+  -a, --append       append to the output file (default is to overwrite)
+  -o, --output=FILE  output file. If not specified, output will be to <stdout>
+
+DESCRIPTION
+  Breakscape text
+
+EXAMPLES
+  $ bitmark breakscape '[.article] Hello World'
+
+  $ bitmark breakscape input.txt -o output.txt
+```
+
+_See code: [src/commands/breakscape.ts](https://github.com/getMoreBrain/bitmark-cli/blob/v1.4.6/src/commands/breakscape.ts)_
 
 ## `bitmark convert [INPUT]`
 
@@ -85,7 +114,45 @@ EXAMPLES
   $ bitmark convert -f ast input.json -o output.ast.json
 ```
 
-_See code: [src/commands/convert.ts](https://github.com/getMoreBrain/bitmark-cli/blob/v1.4.4/src/commands/convert.ts)_
+_See code: [src/commands/convert.ts](https://github.com/getMoreBrain/bitmark-cli/blob/v1.4.6/src/commands/convert.ts)_
+
+## `bitmark convertText [INPUT]`
+
+Convert between bitmark text formats
+
+```
+USAGE
+  $ bitmark convertText [INPUT] [-f bitmark--|bitmark++] [--indent <value> -p] [-a -o <value>]
+
+ARGUMENTS
+  INPUT  file to read, or text or json string. If not specified, input will be from <stdin>
+
+FLAGS
+  -f, --textFormat=<option>  [default: bitmark--] conversion format
+                             <options: bitmark--|bitmark++>
+
+FILE OUTPUT FLAGS
+  -a, --append       append to the output file (default is to overwrite)
+  -o, --output=FILE  output file. If not specified, output will be to <stdout>
+
+JSON FORMATTING FLAGS
+  -p, --pretty     prettify the JSON output with indent
+  --indent=INDENT  prettify indent (default:2)
+
+DESCRIPTION
+  Convert between bitmark text formats
+
+EXAMPLES
+  $ bitmark convertText 'Hello World'
+
+  $ bitmark convertText '[{"type":"paragraph","content":[{"text":"Hello World","type":"text"}],"attrs":{}}]'
+
+  $ bitmark convertText input.json -o output.txt
+
+  $ bitmark convertText input.txt -o output.json
+```
+
+_See code: [src/commands/convertText.ts](https://github.com/getMoreBrain/bitmark-cli/blob/v1.4.6/src/commands/convertText.ts)_
 
 ## `bitmark help [COMMANDS]`
 
@@ -149,5 +216,31 @@ EXAMPLES
   $ bitmark info -f json -p bit --bit=still-image-film
 ```
 
-_See code: [src/commands/info.ts](https://github.com/getMoreBrain/bitmark-cli/blob/v1.4.4/src/commands/info.ts)_
+_See code: [src/commands/info.ts](https://github.com/getMoreBrain/bitmark-cli/blob/v1.4.6/src/commands/info.ts)_
+
+## `bitmark unbreakscape [INPUT]`
+
+Unbreakscape text
+
+```
+USAGE
+  $ bitmark unbreakscape [INPUT] [-a -o <value>]
+
+ARGUMENTS
+  INPUT  file to read, or text. If not specified, input will be from <stdin>
+
+FILE OUTPUT FLAGS
+  -a, --append       append to the output file (default is to overwrite)
+  -o, --output=FILE  output file. If not specified, output will be to <stdout>
+
+DESCRIPTION
+  Unbreakscape text
+
+EXAMPLES
+  $ bitmark unbreakscape '[^.article] Hello World'
+
+  $ bitmark unbreakscape input.txt -o output.txt
+```
+
+_See code: [src/commands/unbreakscape.ts](https://github.com/getMoreBrain/bitmark-cli/blob/v1.4.6/src/commands/unbreakscape.ts)_
 <!-- commandsstop -->
