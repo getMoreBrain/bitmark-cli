@@ -1,6 +1,6 @@
 {
   "name": "@gmb/bitmark-cli",
-  "version": "1.4.10",
+  "version": "1.4.11",
   "description": "Bitmark comand line interface",
   "author": "Get More Brain Ltd",
   "license": "ISC",
@@ -41,7 +41,7 @@
     "npm-exists": "https://registry.yarnpkg.com/@favware/skip-dependency/-/skip-dependency-1.2.1.tgz"
   },
   "dependencies": {
-    "@gmb/bitmark-parser-generator": "^1.4.10",
+    "@gmb/bitmark-parser-generator": "^1.4.11",
     "@oclif/core": "^3",
     "@oclif/plugin-help": "^6",
     "@oclif/plugin-plugins": "^3.9.1",
