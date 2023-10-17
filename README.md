@@ -18,7 +18,7 @@ $ npm install -g @gmb/bitmark-cli
 $ bitmark COMMAND
 running command...
 $ bitmark (--version)
-@gmb/bitmark-cli/1.4.6 darwin-x64 node-v18.14.2
+@gmb/bitmark-cli/1.4.10 darwin-x64 node-v18.14.2
 $ bitmark --help [COMMAND]
 USAGE
   $ bitmark COMMAND
@@ -58,7 +58,7 @@ EXAMPLES
   $ bitmark breakscape input.txt -o output.txt
 ```
 
-_See code: [src/commands/breakscape.ts](https://github.com/getMoreBrain/bitmark-cli/blob/v1.4.6/src/commands/breakscape.ts)_
+_See code: [src/commands/breakscape.ts](https://github.com/getMoreBrain/bitmark-cli/blob/v1.4.10/src/commands/breakscape.ts)_
 
 ## `bitmark convert [INPUT]`
 
@@ -114,7 +114,7 @@ EXAMPLES
   $ bitmark convert -f ast input.json -o output.ast.json
 ```
 
-_See code: [src/commands/convert.ts](https://github.com/getMoreBrain/bitmark-cli/blob/v1.4.6/src/commands/convert.ts)_
+_See code: [src/commands/convert.ts](https://github.com/getMoreBrain/bitmark-cli/blob/v1.4.10/src/commands/convert.ts)_
 
 ## `bitmark convertText [INPUT]`
 
@@ -152,7 +152,7 @@ EXAMPLES
   $ bitmark convertText input.txt -o output.json
 ```
 
-_See code: [src/commands/convertText.ts](https://github.com/getMoreBrain/bitmark-cli/blob/v1.4.6/src/commands/convertText.ts)_
+_See code: [src/commands/convertText.ts](https://github.com/getMoreBrain/bitmark-cli/blob/v1.4.10/src/commands/convertText.ts)_
 
 ## `bitmark help [COMMANDS]`
 
@@ -172,7 +172,7 @@ DESCRIPTION
   Display help for bitmark.
 ```
 
-_See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v5.2.20/src/commands/help.ts)_
+_See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v6.0.3/src/commands/help.ts)_
 
 ## `bitmark info [INFO]`
 
@@ -216,7 +216,7 @@ EXAMPLES
   $ bitmark info -f json -p bit --bit=still-image-film
 ```
 
-_See code: [src/commands/info.ts](https://github.com/getMoreBrain/bitmark-cli/blob/v1.4.6/src/commands/info.ts)_
+_See code: [src/commands/info.ts](https://github.com/getMoreBrain/bitmark-cli/blob/v1.4.10/src/commands/info.ts)_
 
 ## `bitmark unbreakscape [INPUT]`
 
@@ -242,5 +242,5 @@ EXAMPLES
   $ bitmark unbreakscape input.txt -o output.txt
 ```
 
-_See code: [src/commands/unbreakscape.ts](https://github.com/getMoreBrain/bitmark-cli/blob/v1.4.6/src/commands/unbreakscape.ts)_
+_See code: [src/commands/unbreakscape.ts](https://github.com/getMoreBrain/bitmark-cli/blob/v1.4.10/src/commands/unbreakscape.ts)_
 <!-- commandsstop -->

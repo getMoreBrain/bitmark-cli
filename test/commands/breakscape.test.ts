@@ -5,6 +5,6 @@ describe('breakscape', () => {
     .stdout()
     .command(['breakscape', '[.article] Hello World'])
     .it("bitmark breakscape '[.article] Hello World'", (ctx) => {
-      expect(ctx.stdout.replace(new RegExp('[\\n]', 'g'), '')).to.equal('[^.article] Hello World');
+      expect(ctx.stdout.replace(new RegExp('[\\n]', 'g'), '')).to.equal('[^.article^] Hello World');
     });
 });
