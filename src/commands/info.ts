@@ -39,7 +39,7 @@ export default class Convert extends Command {
       description: 'output deprecated bits',
     }),
     all: Flags.boolean({
-      description: 'output all bits inlcuding deprecated',
+      description: 'output all bits including deprecated',
       exclusive: ['deprecated'],
     }),
 
