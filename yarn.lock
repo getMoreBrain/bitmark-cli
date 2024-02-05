@@ -109,7 +109,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@gmb/bitmark-cli@workspace:."
   dependencies:
-    "@gmb/bitmark-parser-generator": ^1.5.13
+    "@gmb/bitmark-parser-generator": ^1.5.14
     "@oclif/core": ^3
     "@oclif/plugin-help": ^6
     "@oclif/plugin-plugins": ^4.1.16
@@ -120,7 +120,7 @@ __metadata:
     "@types/node": ^20.11.0
     "@typescript-eslint/eslint-plugin": ^6.18.1
     "@typescript-eslint/parser": ^6.18.1
-    bitmark-grammar: 1.1.1
+    bitmark-grammar: 1.1.5
     chai: ^4
     eslint: ^8.56.0
     eslint-config-prettier: ^9.1.0
@@ -139,15 +139,15 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@gmb/bitmark-parser-generator@npm:^1.5.13":
-  version: 1.5.13
-  resolution: "@gmb/bitmark-parser-generator@npm:1.5.13"
+"@gmb/bitmark-parser-generator@npm:^1.5.14":
+  version: 1.5.14
+  resolution: "@gmb/bitmark-parser-generator@npm:1.5.14"
   dependencies:
     "@ncoderz/superenum": ^0.2.3
     "@types/fs-extra": ^11.0.4
     "@ungap/structured-clone": ^1.2.0
     fs-extra: ^11.2.0
-  checksum: 1bb0053b36a00790ad17d58bc6855e36ff48b2c130961c3be3799cbe9f500c4821f4c552563eea93437f8b550583e91246331e33e2468b8015f7bcdfb329d66f
+  checksum: 84569ab9e9350f674dfff9aa93fb807f6f3d333d0cd9830888a72ce8f57b70232e616e462e966d72c8d863611ae89874bcdb7f1e0a0945b7e79e289f11115490
   languageName: node
   linkType: hard
 
@@ -2013,9 +2013,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"bitmark-grammar@npm:1.1.1":
-  version: 1.1.1
-  resolution: "bitmark-grammar@npm:1.1.1"
+"bitmark-grammar@npm:1.1.5":
+  version: 1.1.5
+  resolution: "bitmark-grammar@npm:1.1.5"
   dependencies:
     "@types/diff": ^5.0.3
     antlr4ts: ^0.5.0-alpha.4
@@ -2027,7 +2027,7 @@ __metadata:
     ramda: ^0.28.0
     safe-buffer: ^5.2.1
     utf8-length: 0.0.1
-  checksum: 9cb569af8cf6805a66bfe35b7f4c0ef6a3180f7868be9b4445ee041e627007dcb2a2d0bd8ffa25a67037f5c260290822d8a2798b60a8842f866ff18bedcfd336
+  checksum: 57d871a3d8414d2af6113a3b7cfca78fdd713dbf3a16829c0a82b04d6b1d3c07ea8b8333761643939e7e24742e7da57f4e69d5745a0e52f27e33e6a5c1bdc182
   languageName: node
   linkType: hard
 

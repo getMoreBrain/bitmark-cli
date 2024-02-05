@@ -39,11 +39,11 @@
     "antlr4ts": "0.5.0-alpha.4"
   },
   "dependencies": {
-    "@gmb/bitmark-parser-generator": "^1.5.13",
+    "@gmb/bitmark-parser-generator": "^1.5.14",
     "@oclif/core": "^3",
     "@oclif/plugin-help": "^6",
     "@oclif/plugin-plugins": "^4.1.16",
-    "bitmark-grammar": "1.1.1"
+    "bitmark-grammar": "1.1.5"
   },
   "devDependencies": {
     "@oclif/test": "^3.1.12",
