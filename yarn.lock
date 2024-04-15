@@ -860,7 +860,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@gmb/bitmark-cli@workspace:."
   dependencies:
-    "@gmb/bitmark-parser-generator": "npm:^1.6.0"
+    "@gmb/bitmark-parser-generator": "npm:^1.6.1"
     "@oclif/core": "npm:^3"
     "@oclif/plugin-help": "npm:^6"
     "@oclif/plugin-plugins": "npm:^4.3.6"
@@ -890,15 +890,15 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@gmb/bitmark-parser-generator@npm:^1.6.0":
-  version: 1.6.0
-  resolution: "@gmb/bitmark-parser-generator@npm:1.6.0"
+"@gmb/bitmark-parser-generator@npm:^1.6.1":
+  version: 1.6.1
+  resolution: "@gmb/bitmark-parser-generator@npm:1.6.1"
   dependencies:
     "@ncoderz/superenum": "npm:^0.2.3"
     "@types/fs-extra": "npm:^11.0.4"
     "@ungap/structured-clone": "npm:^1.2.0"
     fs-extra: "npm:^11.2.0"
-  checksum: 10c0/007997a40c384f006ea4a85673be2abfec6385be8dedb6e8cb52346d3ad1560da74b1ceac50538fca8f482a457f1ce90fb0adab989d43fac710644c7bff87d09
+  checksum: 10c0/8f27fd7be98e3e2c8cb591b428cba3274e0f2ef93ac1c1a85854fe4923b221350a6efc925324b24413eff97370e44e81fdfb1e6dced548756232758be92d5bf6
   languageName: node
   linkType: hard
 
