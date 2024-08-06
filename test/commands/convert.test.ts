@@ -22,7 +22,7 @@ describe('convert', () => {
     .command(['convert', '-v', '2', '[.article] Hello World'])
     .it("bitmark convert '[.article] Hello World'", (ctx) => {
       expect(ctx.stdout).to.contain(
-        '"bit":{"type":"article","format":"bitmark--","bitLevel":1,"body":"Hello World"}',
+        '"bit":{"type":"article","format":"bitmark--","bitLevel":1,"item":"","lead":"","pageNumber":"","marginNumber":"","hint":"","instruction":"","body":"Hello World"}',
         // '[{"bit":{"type":"article","format":"bitmark--","body":"Hello World"},"bitmark":"[.article] Hello World"}]\n',
       );
     });
