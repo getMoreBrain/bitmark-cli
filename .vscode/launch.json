@@ -4,6 +4,19 @@
     {
       "type": "node",
       "request": "launch",
+      "name": "'version'",
+      "skipFiles": ["<node_internals>/**"],
+      "program": "${workspaceFolder}/bin/dev",
+      "args": ["version"],
+      // "env": {
+      //   "DEBUG": "*"
+      // },
+      "console": "integratedTerminal",
+      "sourceMaps": true
+    },
+    {
+      "type": "node",
+      "request": "launch",
       "name": "'convert'",
       "skipFiles": ["<node_internals>/**"],
       "program": "${workspaceFolder}/bin/dev",
