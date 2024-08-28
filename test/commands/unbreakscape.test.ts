@@ -1,10 +1,13 @@
-import { expect, test } from '@oclif/test';
+import { captureOutput } from '@oclif/test';
+import { expect } from 'chai';
+
+import Unbreakscape from '../../src/commands/unbreakscape';
 
 describe('unbreakscape', () => {
-  test
-    .stdout()
-    .command(['unbreakscape', '[^.article^] Hello World'])
-    .it("bitmark unbreakscape '[^.article^] Hello World'", (ctx) => {
-      expect(ctx.stdout.replace(new RegExp('[\\n]', 'g'), '')).to.equal('[.article] Hello World');
+  it("bitmark unbreakscape '[^.article^] Hello World'", async () => {
+    const { stdout } = await captureOutput(async () => {
+      return Unbreakscape.run(['[^.article^] Hello World']);
     });
+    expect(stdout.replace(new RegExp('[\\n]', 'g'), '')).to.equal('[.article] Hello World');
+  });
 });
