@@ -43,7 +43,8 @@
     "@oclif/core": "^4",
     "@oclif/plugin-help": "^6",
     "@oclif/plugin-plugins": "^5.4.6",
-    "bitmark-grammar": "1.1.5"
+    "bitmark-grammar": "1.1.5",
+    "tslib": "^2.7.0"
   },
   "devDependencies": {
     "@oclif/test": "^4.0.9",
@@ -64,7 +65,6 @@
     "prettier": "^3.3.3",
     "shx": "^0.3.4",
     "ts-node": "^10.9.2",
-    "tslib": "^2.7.0",
     "typescript": "5.5.4"
   },
   "oclif": {
