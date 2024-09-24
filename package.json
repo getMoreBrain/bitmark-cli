@@ -1,6 +1,6 @@
 {
   "name": "@gmb/bitmark-cli",
-  "version": "1.25.0",
+  "version": "1.28.0",
   "description": "Bitmark command line interface",
   "author": "Get More Brain Ltd",
   "license": "ISC",
@@ -38,8 +38,11 @@
   "overrides": {
     "antlr4ts": "0.5.0-alpha.4"
   },
+  "contributors": [
+    "Richard Sewell (https://github.com/six5536)"
+  ],
   "dependencies": {
-    "@gmb/bitmark-parser-generator": "^1.25.0",
+    "@gmb/bitmark-parser-generator": "^1.28.0",
     "@oclif/core": "^4",
     "@oclif/plugin-help": "^6",
     "@oclif/plugin-plugins": "^5.4.6",
