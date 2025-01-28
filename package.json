@@ -42,7 +42,7 @@
     "Richard Sewell (https://github.com/six5536)"
   ],
   "dependencies": {
-    "@gmb/bitmark-parser-generator": "^2.4.0",
+    "@gmb/bitmark-parser-generator": "^3.1.0",
     "@oclif/core": "^4",
     "@oclif/plugin-help": "^6",
     "@oclif/plugin-plugins": "^5.4.6",
