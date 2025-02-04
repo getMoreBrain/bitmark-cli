@@ -1,6 +1,6 @@
 {
   "name": "@gmb/bitmark-cli",
-  "version": "2.4.0",
+  "version": "3.3.0",
   "description": "Bitmark command line interface",
   "author": "Get More Brain Ltd",
   "license": "ISC",
