@@ -27,12 +27,15 @@ USAGE
 <!-- usagestop -->
 # Commands
 <!-- commands -->
-* [`bitmark breakscape [INPUT]`](#bitmark-breakscape-input)
-* [`bitmark convert [INPUT]`](#bitmark-convert-input)
-* [`bitmark convertText [INPUT]`](#bitmark-converttext-input)
-* [`bitmark help [COMMANDS]`](#bitmark-help-commands)
-* [`bitmark info [INFO]`](#bitmark-info-info)
-* [`bitmark unbreakscape [INPUT]`](#bitmark-unbreakscape-input)
+- [@gmb/bitmark-cli](#gmbbitmark-cli)
+- [Usage](#usage)
+- [Commands](#commands)
+  - [`bitmark breakscape [INPUT]`](#bitmark-breakscape-input)
+  - [`bitmark convert [INPUT]`](#bitmark-convert-input)
+  - [`bitmark convertText [INPUT]`](#bitmark-converttext-input)
+  - [`bitmark help [COMMANDS]`](#bitmark-help-commands)
+  - [`bitmark info [INFO]`](#bitmark-info-info)
+  - [`bitmark unbreakscape [INPUT]`](#bitmark-unbreakscape-input)
 
 ## `bitmark breakscape [INPUT]`
 
@@ -107,9 +110,9 @@ EXAMPLES
 
   $ bitmark convert '[{"bitmark": "[.article] Hello World","bit": { "type": "article", "format": "bitmark--", "body": "Hello World" }}]'
 
-  $ bitmark convert input.json -o output.bit
+  $ bitmark convert input.json -o output.bitmark
 
-  $ bitmark convert input.bit -o output.json
+  $ bitmark convert input.bitmark -o output.json
 
   $ bitmark convert -f ast input.json -o output.ast.json
 ```
