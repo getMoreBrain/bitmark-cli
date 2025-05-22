@@ -75,6 +75,10 @@ export default class Convert extends Command {
       description: 'include bitmark text format in bitmark even if it is the default (bitmark--)',
       helpGroup: 'Bitmark Formatting',
     }),
+    spacesAroundValues: Flags.integer({
+      description: 'number of spaces around values in bitmark (default: 1)',
+      helpGroup: 'Bitmark Formatting',
+    }),
     cardSetVersion: Flags.integer({
       description: 'version of card set to use in bitmark (default: set by bitmark version)',
       helpGroup: 'Bitmark Formatting',
@@ -126,10 +130,12 @@ export default class Convert extends Command {
       plainText,
       excludeUnknownProperties,
       explicitTextFormat,
+      spacesAroundValues: spacesAroundValuesIn,
       cardSetVersion,
       parser,
     } = flags;
     const prettyIndent = pretty ? Math.max(0, indent ?? 2) : undefined;
+    const spacesAroundValues = spacesAroundValuesIn != null ? Math.max(0, spacesAroundValuesIn ?? 1) : undefined;
     const outputFormat = Output.fromValue(format);
     const bitmarkParserType = parser === 'antlr' ? 'antlr' : BitmarkParserType.fromValue(parser);
 
@@ -177,6 +183,7 @@ export default class Convert extends Command {
         },
         bitmarkOptions: {
           explicitTextFormat,
+          spacesAroundValues,
           cardSetVersion: CardSetVersion.fromValue(cardSetVersion),
         },
       });
