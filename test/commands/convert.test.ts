@@ -24,7 +24,7 @@ import Convert from '../../src/commands/convert';
         return Convert.run(['-v', '2', '[.article] Hello World']);
       });
       expect(stdout).to.contain(
-        '"bit":{"type":"article","format":"bitmark--","bitLevel":1,"item":"","lead":"","pageNumber":"","marginNumber":"","hint":"","instruction":"","body":"Hello World"}',
+        '"bit":{"type":"article","format":"bitmark++","bitLevel":1,"item":"","lead":"","pageNumber":"","marginNumber":"","hint":"","instruction":"","body":"Hello World"}',
         // '[{"bit":{"type":"article","format":"bitmark--","body":"Hello World"},"bitmark":"[.article] Hello World"}]\n',
       );
     });
