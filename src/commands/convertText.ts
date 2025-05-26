@@ -25,8 +25,8 @@ export default class ConvertText extends Command {
       char: 'f',
       description: `conversion format`,
       // helpValue: 'FORMAT',
-      default: TextFormat.bitmarkMinusMinus,
-      options: [...TextFormat.values().filter((v) => v !== TextFormat.text)],
+      default: TextFormat.bitmarkText,
+      options: [...TextFormat.values().filter((v) => v !== TextFormat.plainText)],
     }),
 
     // JSON formatting
