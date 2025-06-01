@@ -96,7 +96,7 @@ JSON FORMATTING FLAGS
 BITMARK FORMATTING FLAGS
   --cardSetVersion=<option>  version of card set to use in bitmark (default: set by bitmark version)
                              <options: 1|2>
-  --explicitTextFormat       include bitmark text format in bitmark even if it is the default (bitmark--)
+  --explicitTextFormat       include bitmark text format in bitmark even if it is the default (bitmark++)
 
 PARSER OPTIONS FLAGS
   --parser=<option>  [default: peggy] parser to use
@@ -108,7 +108,7 @@ DESCRIPTION
 EXAMPLES
   $ bitmark convert '[.article] Hello World'
 
-  $ bitmark convert '[{"bitmark": "[.article] Hello World","bit": { "type": "article", "format": "bitmark--", "body": "Hello World" }}]'
+  $ bitmark convert '[{"bitmark": "[.article] Hello World","bit": { "type": "article", "format": "bitmark++", "body": "Hello World" }}]'
 
   $ bitmark convert input.json -o output.bitmark
 
@@ -125,14 +125,14 @@ Convert between bitmark text formats
 
 ```
 USAGE
-  $ bitmark convertText [INPUT] [-f bitmark--|bitmark++] [--indent <value> -p] [-a -o <value>]
+  $ bitmark convertText [INPUT] [-f bitmark++] [--indent <value> -p] [-a -o <value>]
 
 ARGUMENTS
   INPUT  file to read, or text or json string. If not specified, input will be from <stdin>
 
 FLAGS
-  -f, --textFormat=<option>  [default: bitmark--] conversion format
-                             <options: bitmark--|bitmark++>
+  -f, --textFormat=<option>  [default: bitmark++] conversion format
+                             <options: bitmark++>
 
 FILE OUTPUT FLAGS
   -a, --append       append to the output file (default is to overwrite)

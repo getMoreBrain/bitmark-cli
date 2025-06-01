@@ -7,11 +7,11 @@ import Convert from '../../src/commands/convert';
   const { expect } = chai;
 
   describe('convert', () => {
-    it('bitmark convert \'[{"bitmark": "[.article] Hello World","bit": { "type": "article", "format": "bitmark--", "bitLevel": 1, "body": "Hello World" }}]\'', async () => {
+    it('bitmark convert \'[{"bitmark": "[.article] Hello World","bit": { "type": "article", "format": "bitmark++", "bitLevel": 1, "body": "Hello World" }}]\'', async () => {
       // NOTE: cannot pass JSON string as argument to runCommand as it will split it into array of strings
       const { stdout } = await captureOutput(async () => {
         return Convert.run([
-          '[{"bitmark": "[.article] Hello World","bit": { "type": "article", "format": "bitmark--", "bitLevel": 1, "body": "Hello World" }}]',
+          '[{"bitmark": "[.article] Hello World","bit": { "type": "article", "format": "bitmark++", "bitLevel": 1, "body": "Hello World" }}]',
         ]);
       });
 
@@ -25,7 +25,6 @@ import Convert from '../../src/commands/convert';
       });
       expect(stdout).to.contain(
         '"bit":{"type":"article","format":"bitmark++","bitLevel":1,"item":"","lead":"","pageNumber":"","marginNumber":"","hint":"","instruction":"","body":"Hello World"}',
-        // '[{"bit":{"type":"article","format":"bitmark--","body":"Hello World"},"bitmark":"[.article] Hello World"}]\n',
       );
     });
 

@@ -1,4 +1,4 @@
-import { BitmarkParserGenerator, TextFormat } from '@gmb/bitmark-parser-generator';
+import { BitmarkParserGenerator, BodyTextFormat } from '@gmb/bitmark-parser-generator';
 import { Args, Command, Flags } from '@oclif/core';
 
 import { StringUtils } from '../utils/StringUtils';
@@ -25,8 +25,8 @@ export default class ConvertText extends Command {
       char: 'f',
       description: `conversion format`,
       // helpValue: 'FORMAT',
-      default: TextFormat.bitmarkText,
-      options: [...TextFormat.values().filter((v) => v !== TextFormat.plainText)],
+      default: BodyTextFormat.bitmarkPlusPlus,
+      options: [...BodyTextFormat.values().filter((v) => v === BodyTextFormat.bitmarkPlusPlus)],
     }),
 
     // JSON formatting
@@ -83,7 +83,7 @@ export default class ConvertText extends Command {
 
     // Bitmark tool text conversion
     res = await bitmarkTool.convertText(dataIn, {
-      textFormat: TextFormat.fromValue(textFormat),
+      textFormat: BodyTextFormat.fromValue(textFormat),
       outputFile: output,
       fileOptions: {
         append,

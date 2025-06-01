@@ -24,7 +24,7 @@ export default class Convert extends Command {
 
   static examples = [
     "<%= config.bin %> <%= command.id %> '[.article] Hello World'",
-    '<%= config.bin %> <%= command.id %> \'[{"bitmark": "[.article] Hello World","bit": { "type": "article", "format": "bitmark--", "body": "Hello World" }}]\'',
+    '<%= config.bin %> <%= command.id %> \'[{"bitmark": "[.article] Hello World","bit": { "type": "article", "format": "bitmark++", "body": "Hello World" }}]\'',
     '<%= config.bin %> <%= command.id %> input.json -o output.bitmark',
     '<%= config.bin %> <%= command.id %> input.bitmark -o output.json',
     '<%= config.bin %> <%= command.id %> -f ast input.json -o output.ast.json',
@@ -72,7 +72,7 @@ export default class Convert extends Command {
 
     // Bitmark formatting
     explicitTextFormat: Flags.boolean({
-      description: 'include bitmark text format in bitmark even if it is the default (bitmark--)',
+      description: 'include bitmark text format in bitmark even if it is the default (bitmark++)',
       helpGroup: 'Bitmark Formatting',
     }),
     spacesAroundValues: Flags.integer({
