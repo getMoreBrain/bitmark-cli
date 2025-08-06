@@ -55,7 +55,7 @@ export default class Breakscape extends Command {
     }
 
     // Bitmark tool text conversion
-    const res = await bitmarkTool.breakscapeText(dataIn, {
+    const res = bitmarkTool.breakscapeText(dataIn, {
       outputFile: output,
       fileOptions: {
         append,

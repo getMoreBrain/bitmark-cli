@@ -167,7 +167,7 @@ export default class Convert extends Command {
       }
     } else {
       // Bitmark tool conversion (Peggy parser)
-      res = await bitmarkTool.convert(dataIn, {
+      res = bitmarkTool.convert(dataIn, {
         bitmarkVersion: BitmarkVersion.fromValue(version),
         bitmarkParserType,
         outputFile: output,

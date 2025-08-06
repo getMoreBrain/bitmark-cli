@@ -82,7 +82,7 @@ export default class ConvertText extends Command {
     let res: string | unknown;
 
     // Bitmark tool text conversion
-    res = await bitmarkTool.convertText(dataIn, {
+    res = bitmarkTool.convertText(dataIn, {
       textFormat: BodyTextFormat.fromValue(textFormat),
       outputFile: output,
       fileOptions: {
