@@ -1,3 +1,4 @@
+import { Enum } from '@ncoderz/superenum';
 import { Args, Command, Flags } from '@oclif/core';
 import { parse as antlrParse } from 'bitmark-grammar';
 import * as fs from 'fs-extra';
@@ -136,8 +137,8 @@ export default class Convert extends Command {
     } = flags;
     const prettyIndent = pretty ? Math.max(0, indent ?? 2) : undefined;
     const spacesAroundValues = spacesAroundValuesIn != null ? Math.max(0, spacesAroundValuesIn ?? 1) : undefined;
-    const outputFormat = Output.fromValue(format);
-    const bitmarkParserType = parser === 'antlr' ? 'antlr' : BitmarkParserType.fromValue(parser);
+    const outputFormat = Enum(Output).fromValue(format);
+    const bitmarkParserType = parser === 'antlr' ? 'antlr' : Enum(BitmarkParserType).fromValue(parser);
 
     let dataIn: string;
 
@@ -168,7 +169,7 @@ export default class Convert extends Command {
     } else {
       // Bitmark tool conversion (Peggy parser)
       res = bitmarkTool.convert(dataIn, {
-        bitmarkVersion: BitmarkVersion.fromValue(version),
+        bitmarkVersion: Enum(BitmarkVersion).fromValue(version),
         bitmarkParserType,
         outputFile: output,
         outputFormat,
@@ -184,7 +185,7 @@ export default class Convert extends Command {
         bitmarkOptions: {
           explicitTextFormat,
           spacesAroundValues,
-          cardSetVersion: CardSetVersion.fromValue(cardSetVersion),
+          cardSetVersion: Enum(CardSetVersion).fromValue(cardSetVersion),
         },
       });
     }

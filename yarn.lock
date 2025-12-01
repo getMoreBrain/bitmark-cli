@@ -808,7 +808,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@gmb/bitmark-cli@workspace:."
   dependencies:
-    "@gmb/bitmark-parser-generator": "npm:4.20.0"
+    "@gmb/bitmark-parser-generator": "npm:5.0.0"
+    "@ncoderz/superenum": "npm:^1.0.0"
     "@oclif/core": "npm:^4.3.0"
     "@oclif/plugin-help": "npm:^6.2.28"
     "@oclif/plugin-plugins": "npm:^5.4.38"
@@ -838,14 +839,17 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@gmb/bitmark-parser-generator@npm:4.20.0":
-  version: 4.20.0
-  resolution: "@gmb/bitmark-parser-generator@npm:4.20.0"
+"@gmb/bitmark-parser-generator@npm:5.0.0":
+  version: 5.0.0
+  resolution: "@gmb/bitmark-parser-generator@npm:5.0.0"
   dependencies:
-    "@ncoderz/superenum": "npm:^0.2.5"
+    "@ncoderz/superenum": "npm:^1.0.0"
     "@types/fs-extra": "npm:^11.0.4"
-    fs-extra: "npm:^11.3.0"
-  checksum: 10c0/ce1bde49abdc53f82304b3da1f16c08000cb1a1450eb53d2f71a0bf29e807bebcc6d07ec3c4d264c19d853cf69bf004750396062b42c55831a08de5a620b21c6
+    commander: "npm:^14.0.2"
+    fs-extra: "npm:^11.3.2"
+  bin:
+    bitmark-parser: bin/run
+  checksum: 10c0/f9482e0735db9b19069a15e9af71f1115789a42a09c0f6081a904e71c5e3ac0c409e9dff8f5da9fafd1d42164124e61125c8a8053d3d794e8e79fa09e4b317c6
   languageName: node
   linkType: hard
 
@@ -1252,10 +1256,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@ncoderz/superenum@npm:^0.2.5":
-  version: 0.2.5
-  resolution: "@ncoderz/superenum@npm:0.2.5"
-  checksum: 10c0/78d1a6bd608f043f4e724cdf5cbaaf59cfbcb65c5d081bc95a5092d351ffe8fcf07ed96e404a8ea408d962010230f3a9887f83f6bbfe504a8496670c8dacea53
+"@ncoderz/superenum@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "@ncoderz/superenum@npm:1.0.0"
+  checksum: 10c0/e0ed49d2c27fae619870abf2864b7ea756d063d4c404d4a8e80df8720592cd9b89e9798cb21cad5e7bd1f4735a95d1e926246b2c780c56b99f3b3f58fc23bdf3
   languageName: node
   linkType: hard
 
@@ -3126,6 +3130,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"commander@npm:^14.0.2":
+  version: 14.0.2
+  resolution: "commander@npm:14.0.2"
+  checksum: 10c0/245abd1349dbad5414cb6517b7b5c584895c02c4f7836ff5395f301192b8566f9796c82d7bd6c92d07eba8775fe4df86602fca5d86d8d10bcc2aded1e21c2aeb
+  languageName: node
+  linkType: hard
+
 "common-ancestor-path@npm:^1.0.1":
   version: 1.0.1
   resolution: "common-ancestor-path@npm:1.0.1"
@@ -3761,7 +3772,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"fs-extra@npm:^11.3.0":
+"fs-extra@npm:^11.3.2":
   version: 11.3.2
   resolution: "fs-extra@npm:11.3.2"
   dependencies:

@@ -1,4 +1,5 @@
 import { BitmarkParserGenerator, InfoFormat, InfoType } from '@gmb/bitmark-parser-generator';
+import { Enum } from '@ncoderz/superenum';
 import { Args, Command, Flags } from '@oclif/core';
 import * as fs from 'fs-extra';
 import * as path from 'path';
@@ -85,8 +86,8 @@ export default class Convert extends Command {
     const { info } = args;
     const { output, format, append, pretty, indent, bit, all, deprecated } = flags;
     const prettify = pretty ? Math.max(0, indent ?? 2) : undefined;
-    const outputFormat = InfoFormat.fromValue(format) ?? InfoFormat.text;
-    let type = InfoType.fromValue(info) ?? InfoType.list;
+    const outputFormat = Enum(InfoFormat).fromValue(format) ?? InfoFormat.text;
+    let type = Enum(InfoType).fromValue(info) ?? InfoType.list;
     if (type === InfoType.list) {
       if (all) type = InfoType.all;
       else if (deprecated) type = InfoType.deprecated;

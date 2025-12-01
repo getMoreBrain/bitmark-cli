@@ -1,4 +1,5 @@
 import { BitmarkParserGenerator, BodyTextFormat } from '@gmb/bitmark-parser-generator';
+import { Enum } from '@ncoderz/superenum';
 import { Args, Command, Flags } from '@oclif/core';
 
 import { StringUtils } from '../utils/StringUtils';
@@ -26,7 +27,11 @@ export default class ConvertText extends Command {
       description: `conversion format`,
       // helpValue: 'FORMAT',
       default: BodyTextFormat.bitmarkPlusPlus,
-      options: [...BodyTextFormat.values().filter((v) => v === BodyTextFormat.bitmarkPlusPlus)],
+      options: [
+        ...Enum(BodyTextFormat)
+          .values()
+          .filter((v) => v === BodyTextFormat.bitmarkPlusPlus),
+      ],
     }),
 
     // JSON formatting
@@ -83,7 +88,7 @@ export default class ConvertText extends Command {
 
     // Bitmark tool text conversion
     res = bitmarkTool.convertText(dataIn, {
-      textFormat: BodyTextFormat.fromValue(textFormat),
+      textFormat: Enum(BodyTextFormat).fromValue(textFormat),
       outputFile: output,
       fileOptions: {
         append,
