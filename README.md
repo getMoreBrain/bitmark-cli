@@ -3,7 +3,7 @@
 
 *THIS PROJECT IS SUPERCEDED AND DEPRECATED*
 
-bitmark CLI and parser are now available here: [Bitmark Parser](https://getmorebrain.github.io/bitmark-parser/)
+[bitmark CLI and parser are now available here: Bitmark Parser](https://github.com/getMoreBrain/bitmark-parser/)
 
 ---
 
