@@ -1,7 +1,10 @@
 @gmb/bitmark-cli
 =================
 
-![Build & Test](https://github.com/getMoreBrain/bitmark-cli/actions/workflows/build-test.yml/badge.svg?branch=main)
+** THIS PROJECT IS SUPERCEDED AND DEPRECATED **
+
+bitmark CLI and parser are now available here: [Bitmark Parser](https://getmorebrain.github.io/bitmark-parser/)
+
 
 [Try out bitmark - visit the bitmark Playground](https://getmorebrain.github.io/bitmark-playground/)
 
