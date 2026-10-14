@@ -1,10 +1,11 @@
 @gmb/bitmark-cli
 =================
 
-** THIS PROJECT IS SUPERCEDED AND DEPRECATED **
+*THIS PROJECT IS SUPERCEDED AND DEPRECATED*
 
 bitmark CLI and parser are now available here: [Bitmark Parser](https://getmorebrain.github.io/bitmark-parser/)
 
+---
 
 [Try out bitmark - visit the bitmark Playground](https://getmorebrain.github.io/bitmark-playground/)
 
